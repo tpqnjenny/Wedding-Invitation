@@ -39,32 +39,36 @@
         <section class="tel">
             <ul>
                 <li>
-                    최아빠·이엄마의&nbsp;<span class="w40">아들</span>&nbsp;철수
-                    <a class="icon_tel" href="tel:010-1234-1234">
-                        <img src="img/icon_tel.png" alt="">
-                    </a>
-                    <a class="icon_message" href="sms:01012341234">
-                        <img src="img/icon_message.png" alt="">
-                    </a>
+                    최아빠·이엄마의<span class="w40">아들</span>철수
+                    <div class="icon_box">
+                        <a class="icon_tel" href="tel:010-1234-1234">
+                            <img src="img/icon_tel.png" alt="">
+                        </a>
+                        <a class="icon_message" href="sms:01012341234">
+                            <img src="img/icon_message.png" alt="">
+                        </a>
+                    </div>
                 </li>
                 <li>
-                    김아빠·조엄마의&nbsp;<span class="w40">딸</span>&nbsp;영희
-                    <a class="icon_tel" href="tel:010-1234-1234">
-                        <img src="img/icon_tel.png" alt="">
-                    </a>
-                    <a class="icon_message" href="sms:01012341234">
-                        <img src="img/icon_message.png" alt="">
-                    </a>
+                    김아빠·조엄마의<span class="w40">딸</span>영희
+                    <div class="icon_box">
+                        <a class="icon_tel" href="tel:010-1234-1234">
+                            <img src="img/icon_tel.png" alt="">
+                        </a>
+                        <a class="icon_message" href="sms:01012341234">
+                            <img src="img/icon_message.png" alt="">
+                        </a>
+                    </div>
                 </li>
             </ul>
-            <a href="javascript:" class="tel_btn">혼주에게 연락하기</a>
+            <a href="javascript:" onclick="$('.tel .slide_tel').slideToggle();" class="tel_btn">혼주에게 연락하기</a>
             <div class="slide_tel">
                 <ul>
                     <li class="groom">
                         <p class="tel_tit">신랑측</p>
-                        <ul>
+                        <ul class="parents_tel">
                             <li>
-                                아버지 최철수
+                                <span>아버지</span> 최철수
                                 <div class="icon_box">
                                     <a class="icon_tel" href="tel:010-1234-1234">
                                         <img src="img/icon_tel.png" alt="">
@@ -75,7 +79,7 @@
                                 </div>
                             </li>
                             <li>
-                                어머니 김영희
+                                <span>어머니</span> 김영희
                                 <div class="icon_box">
                                     <a class="icon_tel" href="tel:010-1234-1234">
                                         <img src="img/icon_tel.png" alt="">
@@ -89,9 +93,9 @@
                     </li>
                     <li class="bride">
                         <p class="tel_tit">신부측</p>
-                        <ul>
+                        <ul class="parents_tel">
                             <li>
-                                아버지 최철수
+                                <span>아버지</span> 최철수
                                 <div class="icon_box">
                                     <a class="icon_tel" href="tel:010-1234-1234">
                                         <img src="img/icon_tel.png" alt="">
@@ -102,7 +106,7 @@
                                 </div>
                             </li>
                             <li>
-                                어머니 김영희
+                                <span>어머니</span> 김영희
                                 <div class="icon_box">
                                     <a class="icon_tel" href="tel:010-1234-1234">
                                         <img src="img/icon_tel.png" alt="">
@@ -116,6 +120,117 @@
                     </li>
                 </ul>
             </div>
+        </section>
+
+        <section class="calendar">
+            <div class="table_box">
+                <h1>10</h1>
+                <table>
+                    <colgroup>
+                    </colgroup>
+                    <thead>
+                        <tr>
+                            <!-- <td class="c_red">Sun</td>
+                            <td>Mon</td>
+                            <td>Tue</td>
+                            <td>Wed</td>
+                            <td>Thu</td>
+                            <td>Fri</td>
+                            <td class="c_blue">Sat</td> -->
+                            <!-- <td class="c_red">S</td>
+                            <td>M</td>
+                            <td>T</td>
+                            <td>W</td>
+                            <td>T</td>
+                            <td>F</td>
+                            <td class="c_blue">S</td> -->
+                            <td class="c_red">일</td>
+                            <td>월</td>
+                            <td>화</td>
+                            <td>수</td>
+                            <td>목</td>
+                            <td>금</td>
+                            <td class="c_blue">토</td>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td></td>
+                            <td></td>
+                            <td></td>
+                            <td>1</td>
+                            <td>2</td>
+                            <td>3</td>
+                            <td class="c_blue">4</td>
+                        </tr>
+                        <tr>
+                            <td class="c_red">5</td>
+                            <td>6</td>
+                            <td>7</td>
+                            <td>8</td>
+                            <td>9</td>
+                            <td>10</td>
+                            <td class="c_blue">11</td>
+                        </tr>
+                        <tr>
+                            <td class="c_red">12</td>
+                            <td>13</td>
+                            <td>14</td>
+                            <td>15</td>
+                            <td>16</td>
+                            <td>17</td>
+                            <td class="c_blue">18</td>
+                        </tr>
+                        <tr>
+                            <td class="c_red d_day">19</td>
+                            <td>20</td>
+                            <td>21</td>
+                            <td>22</td>
+                            <td>23</td>
+                            <td>24</td>
+                            <td class="c_blue">25</td>
+                        </tr>
+                        <tr>
+                            <td class="c_red">26</td>
+                            <td>27</td>
+                            <td>28</td>
+                            <td>29</td>
+                            <td>30</td>
+                            <td>31</td>
+                            <td></td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+            <div class="timer">
+                <p>철수♥영희 결혼식까지</p>
+                <div class="time">
+                    <span id="d-day-day">00</span>
+                    <span class="col">일 </span>
+                    <span id="d-day-hour">00</span>
+                    <span class="col">시간</span>
+                    <span id="d-day-min">00</span>
+                    <span class="col">분</span>
+                    <span id="d-day-sec">00</span>
+                    <span class="col">초</span>
+                </div>
+            </div>
+        </section>
+
+        <section class="gallery">
+            <h3>gallery</h3>
+            <ul>
+                <li><a href="javascript:" onclick=""><img src="img/img.jpg" alt=""></a></li>
+                <li><a href="javascript:" onclick=""><img src="img/img2.jpg" alt=""></a></li>
+                <li><a href="javascript:" onclick=""><img src="img/img.jpg" alt=""></a></li>
+                <li><a href="javascript:" onclick=""><img src="img/img2.jpg" alt=""></a></li>
+                <li><a href="javascript:" onclick=""><img src="img/img.jpg" alt=""></a></li>
+                <li><a href="javascript:" onclick=""><img src="img/img2.jpg" alt=""></a></li>
+                <li><a href="javascript:" onclick=""><img src="img/img.jpg" alt=""></a></li>
+                <li><a href="javascript:" onclick=""><img src="img/img2.jpg" alt=""></a></li>
+                <li><a href="javascript:" onclick=""><img src="img/img.jpg" alt=""></a></li>
+                <li><a href="javascript:" onclick=""><img src="img/img2.jpg" alt=""></a></li>
+            </ul>
         </section>
     </div>
 </body>
