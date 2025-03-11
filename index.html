@@ -18,6 +18,19 @@
         var mapDiv = document.getElementById('map');
         var map = new naver.maps.Map(mapDiv);
     </script>
+    <!-- <script script src="https://apis.openapi.sk.com/tmap/vectorjs?version=1&appKey=1U1LoVKtfX4q8T73M91efacIhzRBNkQk4NnJPiFe"></script> -->
+    <script src="//developers.kakao.com/sdk/js/kakao.min.js"></script>
+    <script>
+    Kakao.init('c8376f9e2f969bcbd69c4594329971b2');
+    function myKakaoNavi() {
+        Kakao.Navi.start({
+            name:"벨라루체웨딩홀%20서울점",
+            x:37.553756,
+            y:126.925356,
+            coordType:'wgs84'
+        })
+    }
+    </script>
     <link rel="stylesheet" href="css/reset.css">
     <link rel="stylesheet" href="index.css">
 </head>
@@ -320,13 +333,13 @@
             
             <ul class="map_list">
                 <li>
-                    <a href="https://apis.openapi.sk.com/tmap/app/routes?appKey=1U1LoVKtfX4q8T73M91efacIhzRBNkQk4NnJPiFe&name=벨라루체웨딩홀%20서울점&lon=37.590055&lat=127.059928">
+                    <a href="https://www.tmap.co.kr/tmap2/mobile/route.jsp?appKey=1U1LoVKtfX4q8T73M91efacIhzRBNkQk4NnJPiFe&lat=37.590055&lat=127.059928">
                         <img src="./img/tmap.png" alt="">
                         <span>티맵</span>
                     </a>
                 </li>
                 <li>
-                    <a href="https://map.kakao.com/link/to/벨라루체서울,37.590055,127.059928">
+                    <a href="javascript:" onclick="myKakaoNavi();">
                         <img src="./img/kakaonav.png" alt="">
                         <span>카카오내비</span>
                     </a>
