@@ -57,4 +57,25 @@ $(document).ready(function() {
             });
         });
     });
+
+    // 계좌번호 복사하기
+    $(".account .copy_btn").on("click", function(){
+        var textVal = $(this).siblings('.num').text().replace(/\-/g, "").trim();
+        console.log(textVal)
+        var textarea = document.createElement('textarea');
+        textarea.value = textVal;
+        document.body.appendChild(textarea);
+        textarea.select();
+        textarea.setSelectionRange(0, 9999);
+        document.execCommand('copy');
+        document.body.removeChild(textarea);
+        // alert("복사되었습니다.");
+
+        let msg = $(".copied_msg");
+        msg.css({ bottom: "15%", opacity: 1 });
+        
+        setTimeout(function(){
+            msg.css({ bottom: "15%", opacity: 0 });
+        }, 1500);
+    });
 });

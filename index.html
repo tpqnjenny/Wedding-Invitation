@@ -6,6 +6,11 @@
     <title>INVITATION</title>
     <script src="https://code.jquery.com/jquery-3.7.1.min.js"></script>
     <script type="text/javascript" src="js/index.js"></script>
+    <script type="text/javascript" src="https://openapi.map.naver.com/openapi/v3/maps.js?ncpClientId=o43k1n95gk"></script>
+    <script id="code">
+        var mapDiv = document.getElementById('map');
+        var map = new naver.maps.Map(mapDiv);
+    </script>
     <link rel="stylesheet" href="css/reset.css">
     <link rel="stylesheet" href="index.css">
 </head>
@@ -231,6 +236,202 @@
                 <li><a href="javascript:" onclick=""><img src="img/img.jpg" alt=""></a></li>
                 <li><a href="javascript:" onclick=""><img src="img/img2.jpg" alt=""></a></li>
             </ul>
+        </section>
+
+        <section class="location">
+            <h3>오시는 길</h3>
+            <div class="wedding_hall">
+                <h4>
+                    벨라루체 서울
+                    <span>2층 벨라홀</span>
+                </h4>
+                <p class="address">서울 동대문구 망우로 61</p>
+                <a class="icon_tel" href="tel:02-2242-6312">
+                    02-2242-6312
+                    <img src="img/icon_tel.png" alt="">
+                </a>
+            </div>
+            <div id="map" class="map"></div>
+            <code id="snippet" class="snippet"></code>
+            <script id="code">
+                var bellaluce = new naver.maps.LatLng(37.590055, 127.059928)
+                var map = new naver.maps.Map('map', {
+                center: new naver.maps.LatLng(37.590055, 127.059928),
+                zoom: 17,
+                minZoom: 8, //지도의 최소 줌 레벨
+                zoomControl: false, //줌 컨트롤의 표시 여부
+                // zoomControlOptions: { //줌 컨트롤의 옵션
+                //     position: naver.maps.Position.TOP_RIGHT
+                // }
+                });
+                var marker = new naver.maps.Marker({
+                    icon: {
+                    url: "./img/marker.png",
+                    scaledSize: new naver.maps.Size(27, 40),
+                    origin: new naver.maps.Point(0, 0),
+                    },
+                    position: bellaluce,
+                    map: map
+                });
+
+                var contentString = [
+                '<div class="iw_inner" style="padding:5px; margin: 0; width: 150px; text-align: center; ">',
+                '   <p style="foint-size: 2rem; margin: 0; line-height: 1.2;">벨라루체 서울</p>',
+                '   <p style="font-size: 0.8rem; margin: 0;">서울 동대문구 망우로 61</p>',
+                '</div>'
+                ].join('');
+
+                var infowindow = new naver.maps.InfoWindow({
+                    content: contentString,
+                    maxWidth: 200,
+                    height: 50,
+                    backgroundColor: "white",
+                    borderColor: "#7a7a7a",
+                    borderWidth: 2,
+                    disableAnchor: true,
+                    textAlign: "center",
+                    margin: "auto",
+
+                    pixelOffset: new naver.maps.Point(0, -5)
+                });
+
+                naver.maps.Event.addListener(marker, "click", function(e) {
+                    if (infowindow.getMap()) {
+                        infowindow.close();
+                    } else {
+                        infowindow.open(map, marker);
+                    }
+                });
+
+                infowindow.open(map, marker);
+            </script>
+            
+            <ul class="map_list">
+                <li>
+                    <a href="https://apis.openapi.sk.com/tmap/app/routes?appKey=1U1LoVKtfX4q8T73M91efacIhzRBNkQk4NnJPiFe&name=벨라루체서울&lon=37.590055&lat=127.059928">
+                        <img src="./img/tmap.png" alt="">
+                        <span>티맵</span>
+                    </a>
+                </li>
+                <li>
+                    <a href="https://map.kakao.com/link/to/벨라루체서울,37.590055,127.059928">
+                        <img src="./img/kakaonav.png" alt="">
+                        <span>카카오내비</span>
+                    </a>
+                </li>
+                <li>
+                    <a target="_blank" href="https://map.naver.com/p/directions/-/14144253.4315262,4521654.3974551,%EB%B2%A8%EB%9D%BC%EB%A3%A8%EC%B2%B4%EC%9B%A8%EB%94%A9%ED%99%80%20%EC%84%9C%EC%9A%B8%EC%A0%90,1036896821,PLACE_POI/-/car?c=15.00,0,0,0,dh">
+                        <img src="./img/navermap.jpg" alt="">
+                        <span>네이버지도</span>
+                    </a>
+                </li>
+            </ul>
+            
+            <div class="transfer_info">
+                <div class="subway">
+                    <h3>지하철</h3>
+                    <ul>
+                        <li>- <span class="sub_line line_1">1호선</span><span class="sub_line line_kyeongui">경의중앙</span><span class="sub_line line_kyeongchun">경춘선</span></li>
+                        <li>- 회기역 2번 출구 바로 앞회기역 2번 출구 바로 앞</li>
+                    </ul>
+                </div>
+                <div class="bus">
+                    <h3>버스</h3>
+                    <ul>
+                        <li>- 삼육서울병원 하차 (정류장번호 : 06011, 06012)</li>
+                        <li>
+                            <span class="bus_line line1">간선버스</span>
+                            <span class="bus_num">105, 201, 202, 241, 260, 270, 271, 272105, 201, 202, 241, 260, 270, 271, 272</span>
+                        </li>
+                        <li>
+                            <span class="bus_line line2">지선버스</span>
+                            <span class="bus_num">1213, 1224, 1227, 2115, 22111213, 1224, 1227, 2115, 2211, 30, 51, 65, 88, 165, 166, 166-1, 170, 202, 707</span>
+                        </li>
+                        <li>
+                            <span class="bus_line line3">직행버스</span>
+                            <span class="bus_num">1330-2, 1330-3, 1330-4, 1330-44, 3200, 8005</span>
+                        </li>
+                        <li>
+                            <span class="bus_line line4">좌석버스</span>
+                            <span class="bus_num">330-1</span>
+                        </li>
+                    </ul>
+                </div>
+                <div class="car">
+                    <h3>자가용</h3>
+                    <ul>
+                        <li>- 네비게이션 : "벨라루체 서울" 또는 "벨라루체웨딩홀 서울점" 입력</li>
+                        <li>- 주소 검색 : "서울 망우로 61" 또는 "서울 휘경동 267-9" 검색</li>
+                        <li class="parking_info">※ 주차장이 혼잡할 수 있사오니 가급적 대중교통을 이용해 주시기 바랍니다.</li>
+                    </ul>
+                </div>
+            </div>
+        </section>
+
+        <section class="account pos_r">
+            <h3>마음 전하실 곳</h3>
+            <p>멀리서도 축하의 마음을<br>전하고 싶으신 분들을 위해<br>계좌번호를 안내드립니다.</p>
+            <p>소중한 축하를 보내주셔서 감사드리며,<br>따뜻한 마음에 깊이 감사드립니다.</p>
+            <div class="account_info">
+                <ul>
+                    <li class="groom">
+                        <a href="javascript:" onclick="$(this).siblings('.slide_account').slideToggle(); $(this).children('.arrow_btn').toggleClass('on')">신랑측 <span class="arrow_btn"><img src="./img/arrow_blue.png" alt="펼쳐보기"></span></a>
+                        <ul class="slide_account">
+                            <li class="pos_r">
+                                <p>신랑</p>
+                                <span class="num">010-9048-3772</span>
+                                <span class="bank">한국은행 최철수</span>
+                                <a href="javascript:" class="copy_btn">복사</a>
+                            </li>
+                            <li class="pos_r">
+                                <p>신랑 아버지</p>
+                                <span class="num">123456789-12-123456</span>
+                                <span class="bank">한국은행 홍길동</span>
+                                <a href="javascript:" class="copy_btn">복사</a>
+                            </li>
+                            <li class="pos_r">
+                                <p>신랑 어머니</p>
+                                <span class="num">123456789-12-123456</span>
+                                <span class="bank">한국은행 홍길동</span>
+                                <a href="javascript:" class="copy_btn">복사</a>
+                            </li>
+                        </ul>
+                    </li>
+                    <li class="bride">
+                        <a href="javascript:" onclick="$(this).siblings('.slide_account').slideToggle(); $(this).children('.arrow_btn').toggleClass('on')">신부측 <span class="arrow_btn"><img src="./img/arrow_pink.png" alt="펼쳐보기"></span></a>
+                        <ul class="slide_account">
+                            <li class="pos_r">
+                                <p>신부</p>
+                                <span class="num">123456789-12-123456</span>
+                                <span class="bank">한국은행 최철수</span>
+                                <a href="javascript:" class="copy_btn">복사</a>
+                            </li>
+                            <li class="pos_r">
+                                <p>신부 아버지</p>
+                                <span class="num">123456789-12-123456</span>
+                                <span class="bank">한국은행 홍길동</span>
+                                <a href="javascript:" class="copy_btn">복사</a>
+                            </li>
+                            <li class="pos_r">
+                                <p>신부 어머니</p>
+                                <span class="num">123456789-12-123456</span>
+                                <span class="bank">한국은행 홍길동</span>
+                                <a href="javascript:" class="copy_btn">복사</a>
+                            </li>
+                        </ul>
+                    </li>
+                </ul>
+                <p class="copied_msg">복사되었습니다.</p>
+            </div>
+        </section>
+
+        <section class="video">
+            <h3>식전영상</h3>
+            <iframe src="https://www.youtube.com/embed/YBk4SAqpYaQ?autoplay=1&mute=1&rel=0" frameborder="0"></iframe>
+        </section>
+
+        <section class="closing">
+            <img src="./img/img2.jpg" alt="">
         </section>
     </div>
 </body>
