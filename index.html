@@ -3,6 +3,13 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta property="og:url" content="https://tpqnjenny.github.io/Wedding-Invitation/">
+    <meta property="og:title" content="최철수♡김영희 결혼식에 초대합니다.">
+    <meta property="og:type" content="website">
+    <meta property="og:image" content="./img.jpg">
+    <meta property="og:image:width" content="800">
+    <meta property="og:image:height" content="1200">
+    <meta property="og:description" content="모바일청첩장">
     <title>INVITATION</title>
     <script src="https://code.jquery.com/jquery-3.7.1.min.js"></script>
     <script type="text/javascript" src="js/index.js"></script>
@@ -16,6 +23,11 @@
 </head>
 <body>
     <div class="mobile">
+        <input type="hidden" id="eventDateTime" value="2025-10-19 일요일 오후 2시 30분">
+        <input type="hidden" id="eventDate" value="2025-10-19">
+        <input type="hidden" id="map_lat" value="37.590055">
+        <input type="hidden" id="map_lng" value="127.059928">
+        <input type="hidden" id="map_loc" value="벨라루체 서울">
         <section class="main">
             <div class="pos_r">
                 <img src="img/img2.jpg" alt="">
@@ -245,7 +257,7 @@
                     벨라루체 서울
                     <span>2층 벨라홀</span>
                 </h4>
-                <p class="address">서울 동대문구 망우로 61</p>
+                <p class="address" id="addressDetail">서울 동대문구 망우로 61</p>
                 <a class="icon_tel" href="tel:02-2242-6312">
                     02-2242-6312
                     <img src="img/icon_tel.png" alt="">
@@ -308,7 +320,7 @@
             
             <ul class="map_list">
                 <li>
-                    <a href="https://apis.openapi.sk.com/tmap/app/routes?appKey=1U1LoVKtfX4q8T73M91efacIhzRBNkQk4NnJPiFe&name=벨라루체서울&lon=37.590055&lat=127.059928">
+                    <a href="https://apis.openapi.sk.com/tmap/app/routes?appKey=1U1LoVKtfX4q8T73M91efacIhzRBNkQk4NnJPiFe&name=벨라루체%20서울&lon=37.590055&lat=127.059928">
                         <img src="./img/tmap.png" alt="">
                         <span>티맵</span>
                     </a>
@@ -433,6 +445,11 @@
         <section class="closing">
             <img src="./img/img.jpg" alt="">
         </section>
+        
+        <section class="share">
+            <a href="javascript:" onclick="shareMessage();" class="kakao_share">카카오톡 공유하기</a>
+        </section>
+
         <div class="copyright">ⓒ 2025. Yeyoung Kim All rights reserved</div>
     </div>
 </body>
