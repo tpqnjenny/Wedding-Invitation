@@ -20,15 +20,17 @@
     </script>
     <script script src="https://apis.openapi.sk.com/tmap/vectorjs?version=1&appKey=1U1LoVKtfX4q8T73M91efacIhzRBNkQk4NnJPiFe"></script>
     <script src="//developers.kakao.com/sdk/js/kakao.min.js"></script>
+    <script src="https://t1.kakaocdn.net/kakao_js_sdk/2.7.4/kakao.min.js" integrity="sha384-DKYJZ8NLiK8MN4/C5P2dtSmLQ4KwPaoqAfyA/DfmEc1VDxu4yyC7wy6K1Hs90nka" crossorigin="anonymous"></script>
     <script>
     Kakao.init('c8376f9e2f969bcbd69c4594329971b2');
-    function myKakaoNavi() {
+
+    function startNavigation() {
         Kakao.Navi.start({
-            name:"벨라루체웨딩홀 서울점",
-            x:37.553756,
-            y:126.925356,
-            coordType:'wgs84'
-        })
+        name: '벨라루체웨딩홀 서울점',
+        x: 126.925356,
+        y: 37.553756,
+        coordType: 'wgs84',
+        });
     }
     </script>
     <link rel="stylesheet" href="css/reset.css">
@@ -339,7 +341,7 @@
                     </a>
                 </li>
                 <li>
-                    <a href="javascript:" onclick="myKakaoNavi();">
+                    <a href="javascript:" onclick="startNavigation();">
                         <img src="./img/kakaonav.png" alt="">
                         <span>카카오내비</span>
                     </a>
