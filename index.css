@@ -4,12 +4,12 @@
 *::after,
 *::before {box-sizing: border-box;}
 html,
-body {width: 100vw; margin: 0; padding: 0; cursor: default; overflow-x: hidden;}
+body {width: 100vw; max-width: 500px; margin: 0 auto; padding: 0; cursor: default; overflow-x: hidden;}
 
 *{font-family: 'GowunDodum-Regular', sans-serif;}
-.mobile{width: 100%; max-width: 500px; height: 100vh; margin: 0 auto; border-left: 1px solid #ccc; border-right: 1px solid #ccc; box-shadow: 0px 0px 20px 0px #e0e0e0; position: relative; overflow-x: hidden; overflow-y: scroll;}
+.mobile{width: 100%; max-width: 500px; height: 100vh; margin: 0 auto; padding-bottom: 15%; border-left: 1px solid #ccc; border-right: 1px solid #ccc; box-shadow: 0px 0px 20px 0px #e0e0e0; position: relative; overflow-x: hidden; overflow-y: scroll;}
 section{width: 100%; margin-bottom: 20%; text-align: center;}
-.copyright{text-align: center; font-size: 3vw; color: #505050; margin-bottom: 5%;}
+.copyright{text-align: center; font-size: 12px; color: #505050;}
 
 @font-face {
     /* 한글 폰트 - 고운돋움 */
@@ -44,7 +44,7 @@ section{width: 100%; margin-bottom: 20%; text-align: center;}
 
 .tel .tel_btn{display: block; width: 50%; margin: 30px auto 0; padding: 2% 0; text-align: center; color: #e66363; border: 1px solid #ea8a8a; border-radius: 5px; box-shadow: 3px 3px 5px 0px #bcbcbc;}
 
-.tel .slide_tel{display: none; margin-top: 7vw;}
+.tel .slide_tel{display: none; margin-top: 10%;}
 .tel .slide_tel li{margin-bottom: 15px; display: flex; justify-content: space-between; align-items: center;}
 .tel .slide_tel li p{flex: 1 1 0;}
 .tel .slide_tel li span{font-size: 12px;}
@@ -54,9 +54,9 @@ section{width: 100%; margin-bottom: 20%; text-align: center;}
 .tel .slide_tel .parents_tel li{margin: 8px 0;}
 /* .tel .slide_tel p{padding: 0 2px 8px 2px; border-bottom: 1px solid #777;} */
 
-.calendar{padding: 5% 0; background: #fffcfc;}
+.calendar{padding: 5% 0; background: #fff7f7;}
 .calendar .table_box{width: 90%; margin: 5% auto;}
-.calendar .table_box h1{font-size: 30px; color: #e78c8c;}
+.calendar .table_box h1{font-size: 30px; color: #df7a7a;}
 .calendar .table_box .c_red{color: #f93f3f;}
 .calendar .table_box .c_blue{color: #5a64be;}
 .calendar .table_box table{width: 100%;}
@@ -75,8 +75,8 @@ section{width: 100%; margin-bottom: 20%; text-align: center;}
 .gallery ul li{position: relative; overflow: hidden;}
 .gallery ul li a{width: 100%; position: absolute; top: 50%; left: 50%; transform: translate(-50%, -50%);}
 
-.location{padding-top: 10%; background: #fffcfc;}
-.location h3{margin-bottom: 7%; color: #e78c8c; letter-spacing: 1px;}
+.location{padding-top: 10%; background: #fff7f7;}
+.location h3{margin-bottom: 7%; color: #df7a7a; letter-spacing: 1px;}
 .location h4{font-size: 16px; font-weight: normal; line-height: 1.5; display: flex; justify-content: center; align-items: center; flex-wrap: wrap; letter-spacing: 0.5px;}
 .location h4 span{display: block; width: 100%;}
 .location p{margin: 2% 0; font-size: 14px;}
@@ -87,35 +87,35 @@ section{width: 100%; margin-bottom: 20%; text-align: center;}
 .location .map_list{width: 95%; margin: 0 auto; padding-bottom: 5%; display: flex; justify-content: space-between; align-items: center;}
 .location .map_list li{width: calc(100% / 3 - 6px);}
 .location .map_list li a{display: flex; justify-content: center; align-items: center; padding: 10% 0; border-radius: 5px; background: #fff; box-shadow: 3px 3px 3px 2px #f1f1f1;}
-.location .map_list li a img{width: 5vw; height: 5vw; margin-right: 3%;}
-.location .map_list li:first-child a img{width: 4vw; height: 4vw;}
-.location .map_list li a span{font-size: 3.5vw; color: #111;}
+.location .map_list li a img{width: 5vw; max-width: 20px; height: 5vw; max-height: 20px; margin-right: 3%;}
+.location .map_list li:first-child a img{width: 4vw; max-width: 18px; height: 4vw; max-height: 18px;}
+.location .map_list li a span{font-size: 14px; color: #111;}
 
 .location .transfer_info{width: 100%; padding: 5% 4% 0; text-align: left; background: #fff;}
 .location .transfer_info h3{margin-top: 10%; margin-bottom: 5%; font-size: 16px;}
 .location .transfer_info .subway h3{margin-top: 0;}
-.location .transfer_info ul li{line-height: 2.5; font-size: 3.5vw; color: #505050; word-break: keep-all; letter-spacing: -0.5px;}
+.location .transfer_info ul li{line-height: 2.5; font-size: 13px; color: #505050; word-break: keep-all; letter-spacing: -0.5px;}
 .location .transfer_info ul li.parking_info{margin-top: 3%; text-align: center; font-size: 11px;}
 
-.location .transfer_info ul li .sub_line{padding: 1% 3%; margin-left: 1%; font-size: 3.2vw; border-radius: 25px; color: #fff;}
+.location .transfer_info ul li .sub_line{padding: 1% 3%; margin-left: 1%; font-size: 13px; border-radius: 25px; color: #fff;}
 .location .transfer_info ul li .line_1{background: #365abc;}
 .location .transfer_info ul li .line_kyeongui{background: #3D9E9E;}
 .location .transfer_info ul li .line_kyeongchun{background: #87d7be;}
 
 .location .transfer_info .bus ul li:not(:first-child){display: flex; justify-content: flex-start; align-items: flex-start; margin-bottom: 2%;}
-.location .transfer_info ul li .bus_line{padding: 0% 3%; margin-top: 1%; margin-right: 3%; line-height: 2.3; font-size: 3vw; border-radius: 25px; color: #fff;}
+.location .transfer_info ul li .bus_line{padding: 0% 3%; margin-top: 1%; margin-right: 3%; line-height: 2.3; font-size: 11px; border-radius: 25px; color: #fff;}
 .location .transfer_info ul li .line1{background: #386de8;}
 .location .transfer_info ul li .line2{background: #3cc344;}
 .location .transfer_info ul li .line3{background: #fb5852;}
 .location .transfer_info ul li .line4{background: #8841d2;}
 
-.account{padding: 10% 0 5%; background: #fffcfc;}
-.account h3{margin-bottom: 7%; color: #e78c8c; letter-spacing: 1px;}
-.account > p{margin-bottom: 5%; line-height: 1.7; font-size: 3.5vw; color: #505050}
+.account{padding: 10% 0 5%; background: #fff7f7;}
+.account h3{margin-bottom: 7%; color: #df7a7a; letter-spacing: 1px;}
+.account > p{margin-bottom: 5%; line-height: 1.7; font-size: 14px; color: #505050}
 .account .account_info{width: 93%; margin: 0 auto;}
 .account .account_info > ul > li{margin-bottom: 5%; border: 1px solid #ccc; border-radius: 10px; background: #fff; box-shadow: 3px 3px 3px 2px #f1f1f1;}
 .account .account_info > ul > li > a{padding: 3% 10%; display: flex; justify-content: space-between; align-items: center; font-weight: bold;}
-.account .account_info > ul > li > a .arrow_btn{width: 8vw; height: 8vw; transition: 0.5s;}
+.account .account_info > ul > li > a .arrow_btn{width: 8vw; max-width: 33px; height: 8vw; max-height: 33px; transition: 0.5s;}
 .account .account_info > ul > li > a .arrow_btn.on{transform: rotate(180deg); transition: 0.5s;}
 .account .account_info > ul > li.groom > a{text-align: left; color: #5a64be;}
 .account .account_info > ul > li.bride > a{text-align: left; color: #e78c8c;}
@@ -126,9 +126,12 @@ section{width: 100%; margin-bottom: 20%; text-align: center;}
 .account .account_info ul li.groom .slide_account li p{color: #5a64be;}
 .account .account_info ul li.bride .slide_account li p{color: #e78c8c;}
 .account .account_info ul .slide_account li span{display: block; margin-bottom: 2%; font-size: 14px;}
-.account .account_info ul .slide_account li .copy_btn{position: absolute; top: 50%; right: 5%; transform: translateY(-50%); padding: 1.5% 5%; font-size: 3.5vw; color: #353535; border: 1px solid #ddd; border-radius: 3px; box-shadow: 2px 2px 2px 1px #f1f1f1;}
+.account .account_info ul .slide_account li .copy_btn{position: absolute; top: 50%; right: 5%; transform: translateY(-50%); padding: 1.5% 5%; font-size: 13px; color: #353535; border: 1px solid #ddd; border-radius: 3px; box-shadow: 2px 2px 2px 1px #f1f1f1;}
 
-.account .account_info .copied_msg{width: 70%; padding: 4% 0; position: fixed; bottom: -30%; left: 50%; transform: translateX(-50%); font-size: 4.5vw; color: #fff; background: #4c4c4c; border-radius: 5px; box-shadow: 3px 3px 5px 2px #7d7d7d; opacity: 0; transition: all 0.5s ease-in-out;}
+.account .account_info .copied_msg{width: 70%; padding: 4% 0; position: fixed; bottom: -30%; left: 50%; transform: translateX(-50%); font-size: 16px; color: #fff; background: #4c4c4c; border-radius: 5px; box-shadow: 3px 3px 7px 1px #2e2e2e; opacity: 0; transition: all 0.5s ease-in-out;}
 
 .video h3{margin-bottom: 10%; color: #e78c8c; letter-spacing: 1px;}
-.video iframe{width: 93%; height: 52vw;}
+.video iframe{width: 93%; height: 52vw; max-height: 260px;}
+
+.share a{display: flex; justify-content: center; align-items: center; width: 70%; margin: 0 auto 3%; padding: 2% 0; font-size: 13px; border: 1px solid #969696; border-radius: 5px;}
+.share a img{width: 20px; height: 20px; margin-right: 3px;}
