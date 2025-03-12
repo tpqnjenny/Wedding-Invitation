@@ -79,7 +79,3 @@ $(document).ready(function() {
         }, 1500);
     });
 });
-
-function Tmapshow(){
-    location.href ="https://www.tmap.co.kr/tmap2/mobile/route.jsp?appKey=1U1LoVKtfX4q8T73M91efacIhzRBNkQk4NnJPiFe&lat=37.590055&lat=127.059928";
-}
