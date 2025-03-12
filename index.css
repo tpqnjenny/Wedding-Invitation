@@ -6,14 +6,23 @@
 html,
 body {width: 100vw; margin: 0; padding: 0; cursor: default; overflow-x: hidden;}
 
+*{font-family: 'GowunDodum-Regular', sans-serif;}
 .mobile{width: 100%; max-width: 500px; height: 100vh; margin: 0 auto; border-left: 1px solid #ccc; border-right: 1px solid #ccc; box-shadow: 0px 0px 20px 0px #e0e0e0; position: relative; overflow-x: hidden; overflow-y: scroll;}
 section{width: 100%; margin-bottom: 20%; text-align: center;}
 .copyright{text-align: center; font-size: 3vw; color: #505050; margin-bottom: 5%;}
 
+@font-face {
+    /* 한글 폰트 - 고운돋움 */
+    font-family: 'GowunDodum-Regular';
+    src: url('https://fastly.jsdelivr.net/gh/projectnoonnu/noonfonts_2108@1.1/GowunDodum-Regular.woff') format('woff');
+    font-weight: normal;
+    font-style: normal;
+}
+
 /* scroll bar custom */
-.mobile::-webkit-scrollbar {width: 5px;}
-.mobile::-webkit-scrollbar-thumb {background: #aaaaaa; /* 스크롤바 색상 */ border-radius: 10px; /* 스크롤바 둥근 테두리 */}
-.mobile::-webkit-scrollbar-track {background: rgb(236, 236, 236);  /*스크롤바 뒷 배경 색상*/}
+/* .mobile::-webkit-scrollbar {width: 5px;}
+.mobile::-webkit-scrollbar-thumb {background: #aaaaaa; 스크롤바 색상 border-radius: 10px; 스크롤바 둥근 테두리 }
+.mobile::-webkit-scrollbar-track {background: rgb(236, 236, 236);  스크롤바 뒷 배경 색상} */
 
 .main{position: relative;}
 .main .bg{width: 100%; height: 100%; position: absolute; top: 0; left: 0; background: linear-gradient(180deg, transparent 70%, #fff 95%);}
@@ -26,11 +35,11 @@ section{width: 100%; margin-bottom: 20%; text-align: center;}
 .invi_text h3{margin-bottom: 30px; color: #ea8a8a;}
 .invi_text p{line-height: 1.5}
 
-.tel ul{width: 80%; margin: 0 auto;}
-.tel > ul li{margin-bottom: 15px; display: flex; justify-content: stretch; align-items: center; letter-spacing: 0.5px;}
-.tel ul li .icon_box{display: flex; align-items: center;}
-.tel .icon_tel{display: block; width: 17px; line-height: 16px; margin-left: 10px;}
-.tel .icon_message{display: block; width: 18px; line-height: 18px; margin-left: 10px;}
+.tel ul{width: 75%; margin: 0 auto;}
+.tel > ul li{margin-bottom: 15px; display: flex; justify-content: space-between; align-items: center; letter-spacing: 0.5px;}
+.tel > ul li span:nth-child(2){width: 15%;}
+.tel ul li .icon_box{height: 24px; display: flex; align-items: flex-end;}
+.tel ul li .icon_box a{width: 20px; height: 20px; margin: 0 5px;}
 .tel .w40{display: inline-block; width: 40px; text-align: center;}
 
 .tel .tel_btn{display: block; width: 50%; margin: 30px auto 0; padding: 2% 0; text-align: center; color: #e66363; border: 1px solid #ea8a8a; border-radius: 5px; box-shadow: 3px 3px 5px 0px #bcbcbc;}
@@ -45,45 +54,48 @@ section{width: 100%; margin-bottom: 20%; text-align: center;}
 .tel .slide_tel .parents_tel li{margin: 8px 0;}
 /* .tel .slide_tel p{padding: 0 2px 8px 2px; border-bottom: 1px solid #777;} */
 
+.calendar{padding: 5% 0; background: #fffcfc;}
 .calendar .table_box{width: 90%; margin: 5% auto;}
-.calendar .table_box h1{font-size: 7vw; color: #e78c8c;}
+.calendar .table_box h1{font-size: 30px; color: #e78c8c;}
 .calendar .table_box .c_red{color: #f93f3f;}
 .calendar .table_box .c_blue{color: #5a64be;}
 .calendar .table_box table{width: 100%;}
 .calendar .table_box table thead td{padding: 5% 0;}
 .calendar .table_box table tbody td{padding: 3% 0;}
-.calendar .table_box table tbody td.d_day{position: relative; color: #fff;}
-.calendar .table_box table tbody td.d_day::after{content: '♥'; position: absolute; top: 50%; left: 50%; transform: translate(-50%, -50%); font-size: 14vw; color: #f93f3f; z-index: -1;}
+.calendar .table_box table tbody td.d_day{position: relative; color: #fff; background: url(./img/calendar_heart.png) no-repeat center center / contain;}
+.calendar .table_box table tbody td.d_day::after{content: '오후2:30'; width: 100%; position: absolute; bottom: -20%; left: 50%; transform: translateX(-50%); font-size: 10px; color: #f93f3f; z-index: 1;}
 
 .calendar .timer{margin-top: 10%;}
 .calendar .timer p{margin-bottom: 3%; letter-spacing: 0.5px;}
-.calendar .timer .time{margin-bottom: 5%; font-size: 6vw;}
+.calendar .timer .time{margin-bottom: 5%; font-size: 24px;}
 .calendar .timer .time .col{margin-left: -1%; margin-right: 2%; letter-spacing: -1px;}
 
-.gallery h3{margin-bottom: 10%; color: #e78c8c; letter-spacing: 1px;}
+.gallery h3{margin-bottom: 10%; font-size: 22px; color: #e78c8c; letter-spacing: 1px;}
 .gallery ul{width: 95%; margin: 0 auto; display: grid; grid-template-columns: repeat(3, 1fr); grid-template-rows: 130px 130px 130px; grid-gap: 10px;}
 .gallery ul li{position: relative; overflow: hidden;}
 .gallery ul li a{width: 100%; position: absolute; top: 50%; left: 50%; transform: translate(-50%, -50%);}
 
+.location{padding-top: 10%; background: #fffcfc;}
 .location h3{margin-bottom: 7%; color: #e78c8c; letter-spacing: 1px;}
-.location h4{font-size: 4.5vw; font-weight: normal; line-height: 1.8; display: flex; justify-content: center; align-items: center; flex-wrap: wrap; letter-spacing: 0.5px;}
+.location h4{font-size: 16px; font-weight: normal; line-height: 1.5; display: flex; justify-content: center; align-items: center; flex-wrap: wrap; letter-spacing: 0.5px;}
 .location h4 span{display: block; width: 100%;}
-.location p{margin: 2% 0;}
-.location .icon_tel{display: flex; justify-content: center; align-items: center;}
-.location .icon_tel img{width: 5vw; height: 5vw; margin-left: 3%;}
+.location p{margin: 2% 0; font-size: 14px;}
+.location .icon_tel{display: flex; justify-content: center; align-items: center; font-size: 14px;}
+.location .icon_tel img{width: 18px; height: 18px; margin-left: 2%;}
 
 .location .map{width: 95%; height: 300px; margin: 5% auto;}
-.location .map_list{width: 95%; margin: 0 auto; display: flex; justify-content: space-between; align-items: center;}
+.location .map_list{width: 95%; margin: 0 auto; padding-bottom: 5%; display: flex; justify-content: space-between; align-items: center;}
 .location .map_list li{width: calc(100% / 3 - 6px);}
-.location .map_list li a{display: flex; justify-content: center; align-items: center; padding: 10% 0; border-radius: 5px; box-shadow: 3px 3px 3px 2px #f1f1f1;}
+.location .map_list li a{display: flex; justify-content: center; align-items: center; padding: 10% 0; border-radius: 5px; background: #fff; box-shadow: 3px 3px 3px 2px #f1f1f1;}
 .location .map_list li a img{width: 5vw; height: 5vw; margin-right: 3%;}
 .location .map_list li:first-child a img{width: 4vw; height: 4vw;}
 .location .map_list li a span{font-size: 3.5vw; color: #111;}
 
-.location .transfer_info{width: 93%; margin: 10% auto; text-align: left;}
-.location .transfer_info h3{margin-top: 10%; margin-bottom: 5%; font-size: 4.2vw;}
+.location .transfer_info{width: 100%; padding: 5% 4% 0; text-align: left; background: #fff;}
+.location .transfer_info h3{margin-top: 10%; margin-bottom: 5%; font-size: 16px;}
+.location .transfer_info .subway h3{margin-top: 0;}
 .location .transfer_info ul li{line-height: 2.5; font-size: 3.5vw; color: #505050; word-break: keep-all; letter-spacing: -0.5px;}
-.location .transfer_info ul li.parking_info{font-size: 3vw;}
+.location .transfer_info ul li.parking_info{margin-top: 3%; text-align: center; font-size: 11px;}
 
 .location .transfer_info ul li .sub_line{padding: 1% 3%; margin-left: 1%; font-size: 3.2vw; border-radius: 25px; color: #fff;}
 .location .transfer_info ul li .line_1{background: #365abc;}
@@ -97,10 +109,11 @@ section{width: 100%; margin-bottom: 20%; text-align: center;}
 .location .transfer_info ul li .line3{background: #fb5852;}
 .location .transfer_info ul li .line4{background: #8841d2;}
 
+.account{padding: 10% 0 5%; background: #fffcfc;}
 .account h3{margin-bottom: 7%; color: #e78c8c; letter-spacing: 1px;}
 .account > p{margin-bottom: 5%; line-height: 1.7; font-size: 3.5vw; color: #505050}
 .account .account_info{width: 93%; margin: 0 auto;}
-.account .account_info > ul > li{margin-bottom: 5%; border: 1px solid #ccc; border-radius: 10px; box-shadow: 3px 3px 3px 2px #f1f1f1;}
+.account .account_info > ul > li{margin-bottom: 5%; border: 1px solid #ccc; border-radius: 10px; background: #fff; box-shadow: 3px 3px 3px 2px #f1f1f1;}
 .account .account_info > ul > li > a{padding: 3% 10%; display: flex; justify-content: space-between; align-items: center; font-weight: bold;}
 .account .account_info > ul > li > a .arrow_btn{width: 8vw; height: 8vw; transition: 0.5s;}
 .account .account_info > ul > li > a .arrow_btn.on{transform: rotate(180deg); transition: 0.5s;}
@@ -109,13 +122,13 @@ section{width: 100%; margin-bottom: 20%; text-align: center;}
 
 .account .account_info ul .slide_account{display: none;}
 .account .account_info ul .slide_account li{padding: 5% 10% 3%; text-align: left; border-top: 0.5px solid #ddd;}
-.account .account_info ul .slide_account li p{margin-bottom: 5%;}
+.account .account_info ul .slide_account li p{margin-bottom: 3%;}
 .account .account_info ul li.groom .slide_account li p{color: #5a64be;}
 .account .account_info ul li.bride .slide_account li p{color: #e78c8c;}
-.account .account_info ul .slide_account li span{display: block; margin-bottom: 2%;}
-.account .account_info ul .slide_account li .copy_btn{position: absolute; top: 50%; right: 5%; transform: translateY(-50%); padding: 1.5% 5%; font-size: 3.5vw; color: #353535; border: 1px solid #ddd; box-shadow: 2px 2px 2px 1px #f1f1f1;}
+.account .account_info ul .slide_account li span{display: block; margin-bottom: 2%; font-size: 14px;}
+.account .account_info ul .slide_account li .copy_btn{position: absolute; top: 50%; right: 5%; transform: translateY(-50%); padding: 1.5% 5%; font-size: 3.5vw; color: #353535; border: 1px solid #ddd; border-radius: 3px; box-shadow: 2px 2px 2px 1px #f1f1f1;}
 
 .account .account_info .copied_msg{width: 70%; padding: 4% 0; position: fixed; bottom: -30%; left: 50%; transform: translateX(-50%); font-size: 4.5vw; color: #fff; background: #4c4c4c; border-radius: 5px; box-shadow: 3px 3px 5px 2px #7d7d7d; opacity: 0; transition: all 0.5s ease-in-out;}
 
-.video h3{margin-bottom: 7%; color: #e78c8c; letter-spacing: 1px;}
+.video h3{margin-bottom: 10%; color: #e78c8c; letter-spacing: 1px;}
 .video iframe{width: 93%; height: 52vw;}
