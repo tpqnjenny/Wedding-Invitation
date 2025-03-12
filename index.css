@@ -7,7 +7,7 @@ html,
 body {width: 100vw; max-width: 500px; margin: 0 auto; padding: 0; cursor: default; overflow-x: hidden;}
 
 *{font-family: 'GowunDodum-Regular', sans-serif;}
-.mobile{width: 100%; max-width: 500px; margin: 0 auto; padding-bottom: 15%; border-left: 1px solid #ccc; border-right: 1px solid #ccc; box-shadow: 0px 0px 20px 0px #e0e0e0; position: relative; overflow-x: hidden; overflow-y: scroll;}
+.mobile{width: 100%; max-width: 500px; margin: 0 auto; padding-bottom: 15%; border-left: 1px solid #ccc; border-right: 1px solid #ccc; box-shadow: 0px 0px 20px 0px #e0e0e0; position: relative; overflow-x: hidden;}
 section{width: 100%; margin-bottom: 20%; text-align: center;}
 .copyright{text-align: center; font-size: 12px; color: #505050;}
 
