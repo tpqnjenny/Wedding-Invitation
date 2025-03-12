@@ -18,7 +18,9 @@
         var mapDiv = document.getElementById('map');
         var map = new naver.maps.Map(mapDiv);
     </script>
-    <script script src="https://apis.openapi.sk.com/tmap/vectorjs?version=1&appKey=1U1LoVKtfX4q8T73M91efacIhzRBNkQk4NnJPiFe"></script>
+    <!-- <script script src="https://apis.openapi.sk.com/tmap/vectorjs?version=1&appKey=1U1LoVKtfX4q8T73M91efacIhzRBNkQk4NnJPiFe"></script> -->
+    <script script src="https://apis.openapi.sk.com/tmap/jsv2?version=1&appKey=1U1LoVKtfX4q8T73M91efacIhzRBNkQk4NnJPiFe"></script>
+
     <script src="//developers.kakao.com/sdk/js/kakao.min.js"></script>
     <script src="https://t1.kakaocdn.net/kakao_js_sdk/2.7.4/kakao.min.js" integrity="sha384-DKYJZ8NLiK8MN4/C5P2dtSmLQ4KwPaoqAfyA/DfmEc1VDxu4yyC7wy6K1Hs90nka" crossorigin="anonymous"></script>
     <script>
@@ -335,13 +337,15 @@
             
             <ul class="map_list">
                 <li>
-                    <a href="javascript: Tmapshow();">
+                    <!-- tmap://?rGoName=벨라루체웨딩홀%20서울점&rGoX=127.059928&rGoY=37.590055 -->
+                    <a href="tmap://?rGoName=%EB%B2%A8%EB%9D%BC%EB%A3%A8%EC%B2%B4%EC%9B%A8%EB%94%A9%ED%99%80%20%EC%84%9C%EC%9A%B8%EC%A0%90&rGoX=127.059928&rGoY=37.590055">
                         <img src="./img/tmap.png" alt="">
                         <span>티맵</span>
                     </a>
                 </li>
                 <li>
                     <a href="javascript:" onclick="startNavigation();">
+                    <!-- <a href="kakaomap://route?ep=37.53723,127.00551&by=CAR"> -->
                         <img src="./img/kakaonav.png" alt="">
                         <span>카카오내비</span>
                     </a>
