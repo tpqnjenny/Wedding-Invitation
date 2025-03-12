@@ -26,11 +26,19 @@
     Kakao.init('c8376f9e2f969bcbd69c4594329971b2');
     Kakao.isInitialized();
 
+    // function startNavigation() {
+    //     Kakao.Navi.start({
+    //     name: '벨라루체웨딩홀 서울점',
+    //     x: 126.925356,
+    //     y: 37.553756,
+    //     coordType: 'wgs84',
+    //     });
+    // }
     function startNavigation() {
-        Kakao.Navi.start({
+        Kakao.Navi.share({
         name: '벨라루체웨딩홀 서울점',
-        x: 37.553756,
-        y: 126.925356,
+        x: 126.925356,
+        y: 37.553756,
         coordType: 'wgs84',
         });
     }
