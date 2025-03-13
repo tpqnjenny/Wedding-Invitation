@@ -14,14 +14,18 @@
     <link rel="icon" href="./img/favicon.png" type="image/x-icon">
     <script src="https://code.jquery.com/jquery-3.7.1.min.js"></script>
     <script type="text/javascript" src="js/index.js"></script>
+
+    <!-- naver map -->
     <script type="text/javascript" src="https://openapi.map.naver.com/openapi/v3/maps.js?ncpClientId=o43k1n95gk"></script>
     <script id="code">
         var mapDiv = document.getElementById('map');
         var map = new naver.maps.Map(mapDiv);
     </script>
 
+    <!-- tmap -->
     <script script src="https://apis.openapi.sk.com/tmap/jsv2?version=1&appKey=1U1LoVKtfX4q8T73M91efacIhzRBNkQk4NnJPiFe"></script>
 
+    <!-- kakako navi -->
     <script src="//developers.kakao.com/sdk/js/kakao.min.js"></script>
     <script src="https://t1.kakaocdn.net/kakao_js_sdk/2.7.4/kakao.min.js" integrity="sha384-DKYJZ8NLiK8MN4/C5P2dtSmLQ4KwPaoqAfyA/DfmEc1VDxu4yyC7wy6K1Hs90nka" crossorigin="anonymous"></script>
     <script>
@@ -50,9 +54,11 @@
     <link rel="stylesheet" href="css/reset.css">
     <link rel="stylesheet" href="css/index.css">
 
+    <!-- 구글폰트 -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Birthstone&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Birthstone&family=Rochester&display=swap" rel="stylesheet">
 </head>
 <body>
     <!--콘솔창 차단 스크립트-->
@@ -89,440 +95,483 @@
     </script> -->
     <!--콘솔창 차단 스크립트 끝-->
 
+
     <div class="mobile">
-        <input type="hidden" id="eventDateTime" value="2025-10-19 일요일 오후 2시 30분">
-        <input type="hidden" id="eventDate" value="2025-10-19">
-        <input type="hidden" id="map_lat" value="37.590055">
-        <input type="hidden" id="map_lng" value="127.059928">
-        <input type="hidden" id="map_loc" value="벨라루체 서울">
-        <section class="main">
-            <div class="pos_r">
-                <img src="img/img2.jpg" alt="">
-                <div class="bg"></div>
-                <p class="main_tit">We're<br>getting<br>married !</p>
+        <!-- 로딩화면 -->
+        <div class="loading">
+            <div class="loading_con">
+                <h1>
+                    <span>S</span>
+                    <span>a</span>
+                    <span>v</span>
+                    <span>e</span>
+                    <span>&nbsp;</span>
+                    <span>t</span>
+                    <span>h</span>
+                    <span>e</span>
+                    <span>&nbsp;</span>
+                    <span>D</span>
+                    <span>a</span>
+                    <span>t</span>
+                    <span>e</span>
+                </h1>
+                <h3>
+                    <span class="fc_red">♥</span>
+                    <span>&nbsp;</span>
+                    <span>2</span>
+                    <span>0</span>
+                    <span>2</span>
+                    <span>5</span>
+                    <span>.</span>
+                    <span>1</span>
+                    <span>0</span>
+                    <span>.</span>
+                    <span>1</span>
+                    <span>9</span>
+                    <span>&nbsp;</span>
+                    <span>2</span>
+                    <span>:</span>
+                    <span>3</span>
+                    <span>0</span>
+                    <span>&nbsp;</span>
+                    <span>P</span>
+                    <span>M</span>
+                    <span>&nbsp;</span>
+                    <span class="fc_red">♥</span></h3>
             </div>
+        </div>
 
-            <div class="main_info">
-                <p>2025년 10월 19일 일요일<br>오후 2시 30분</p>
-                <h3>벨라루체 서울 2층 벨라홀</h3>
-            </div>
-        </section>
-
-        <section class="invi_text">
-            <h3>소중한 분들을 초대합니다.</h3>
-            <p>
-                작은 인연으로 만나 연인이 된 저희가
-                <br>이제는 더 큰 열매를 맺고자
-                <br>저희 두사람 결혼합니다.
-                <br>
-                <br>귀한 걸음으로 축하하여 주시면
-                <br>더 없는 기쁨으로 간직하겠습니다.
-            </p>
-        </section>
-
-        <section class="tel">
-            <ul>
-                <li>
-                    <span>최아빠·이엄마의</span>
-                    <span>아들</span>
-                    <span>철수</span>
-                    <div class="icon_box">
-                        <a class="icon_tel" href="tel:010-1234-1234">
-                            <img src="img/icon_tel.png" alt="">
-                        </a>
-                        <a class="icon_message" href="sms:01012341234">
-                            <img src="img/icon_message.png" alt="">
-                        </a>
-                    </div>
-                </li>
-                <li>
-                    <span>김아빠·조엄마의</span>
-                    <span>딸</span>
-                    <span>영희</span>
-                    <div class="icon_box">
-                        <a class="icon_tel" href="tel:010-1234-1234">
-                            <img src="img/icon_tel.png" alt="">
-                        </a>
-                        <a class="icon_message" href="sms:01012341234">
-                            <img src="img/icon_message.png" alt="">
-                        </a>
-                    </div>
-                </li>
-            </ul>
-            <a href="javascript:" onclick="$('.tel .slide_tel').slideToggle();" class="tel_btn">혼주에게 연락하기</a>
-            <div class="slide_tel">
+        <!-- 본문 -->
+        <div class="contents">
+            <section class="main">
+                <div class="pos_r">
+                    <img src="img/img2.jpg" alt="">
+                    <div class="bg"></div>
+                    <p class="main_tit">We're<br>getting<br>married !</p>
+                </div>
+    
+                <div class="main_info">
+                    <p>2025년 10월 19일 일요일<br>오후 2시 30분</p>
+                    <h3>벨라루체 서울 2층 벨라홀</h3>
+                </div>
+            </section>
+    
+            <section class="invi_text">
+                <h3>소중한 분들을 초대합니다.</h3>
+                <p>
+                    작은 인연으로 만나 연인이 된 저희가
+                    <br>이제는 더 큰 열매를 맺고자
+                    <br>저희 두사람 결혼합니다.
+                    <br>
+                    <br>귀한 걸음으로 축하하여 주시면
+                    <br>더 없는 기쁨으로 간직하겠습니다.
+                </p>
+            </section>
+    
+            <section class="tel">
                 <ul>
-                    <li class="groom">
-                        <p class="tel_tit">신랑측</p>
-                        <ul class="parents_tel">
-                            <li>
-                                <span>아버지</span> 최철수
-                                <div class="icon_box">
-                                    <a class="icon_tel" href="tel:010-1234-1234">
-                                        <img src="img/icon_tel_blue.png" alt="">
-                                    </a>
-                                    <a class="icon_message" href="sms:01012341234">
-                                        <img src="img/icon_message_blue.png" alt="">
-                                    </a>
-                                </div>
-                            </li>
-                            <li>
-                                <span>어머니</span> 김영희
-                                <div class="icon_box">
-                                    <a class="icon_tel" href="tel:010-1234-1234">
-                                        <img src="img/icon_tel_blue.png" alt="">
-                                    </a>
-                                    <a class="icon_message" href="sms:01012341234">
-                                        <img src="img/icon_message_blue.png" alt="">
-                                    </a>
-                                </div>
-                            </li>
-                        </ul>
+                    <li>
+                        <span>최아빠·이엄마의</span>
+                        <span>아들</span>
+                        <span>철수</span>
+                        <div class="icon_box">
+                            <a class="icon_tel" href="tel:010-1234-1234">
+                                <img src="img/icon_tel.png" alt="">
+                            </a>
+                            <a class="icon_message" href="sms:01012341234">
+                                <img src="img/icon_message.png" alt="">
+                            </a>
+                        </div>
                     </li>
-                    <li class="bride">
-                        <p class="tel_tit">신부측</p>
-                        <ul class="parents_tel">
-                            <li>
-                                <span>아버지</span> 최철수
-                                <div class="icon_box">
-                                    <a class="icon_tel" href="tel:010-1234-1234">
-                                        <img src="img/icon_tel_pink.png" alt="">
-                                    </a>
-                                    <a class="icon_message" href="sms:01012341234">
-                                        <img src="img/icon_message_pink.png" alt="">
-                                    </a>
-                                </div>
-                            </li>
-                            <li>
-                                <span>어머니</span> 김영희
-                                <div class="icon_box">
-                                    <a class="icon_tel" href="tel:010-1234-1234">
-                                        <img src="img/icon_tel_pink.png" alt="">
-                                    </a>
-                                    <a class="icon_message" href="sms:01012341234">
-                                        <img src="img/icon_message_pink.png" alt="">
-                                    </a>
-                                </div>
-                            </li>
-                        </ul>
+                    <li>
+                        <span>김아빠·조엄마의</span>
+                        <span>딸</span>
+                        <span>영희</span>
+                        <div class="icon_box">
+                            <a class="icon_tel" href="tel:010-1234-1234">
+                                <img src="img/icon_tel.png" alt="">
+                            </a>
+                            <a class="icon_message" href="sms:01012341234">
+                                <img src="img/icon_message.png" alt="">
+                            </a>
+                        </div>
                     </li>
                 </ul>
-            </div>
-        </section>
-
-        <section class="calendar">
-            <div class="table_box">
-                <h1>10</h1>
-                <table>
-                    <colgroup>
-                    </colgroup>
-                    <thead>
-                        <tr>
-                            <!-- <td class="c_red">Sun</td>
-                            <td>Mon</td>
-                            <td>Tue</td>
-                            <td>Wed</td>
-                            <td>Thu</td>
-                            <td>Fri</td>
-                            <td class="c_blue">Sat</td> -->
-                            <!-- <td class="c_red">S</td>
-                            <td>M</td>
-                            <td>T</td>
-                            <td>W</td>
-                            <td>T</td>
-                            <td>F</td>
-                            <td class="c_blue">S</td> -->
-                            <td class="c_red">일</td>
-                            <td>월</td>
-                            <td>화</td>
-                            <td>수</td>
-                            <td>목</td>
-                            <td>금</td>
-                            <td class="c_blue">토</td>
-                        </tr>
-                    </thead>
-                    <tbody>
-                        <tr>
-                            <td></td>
-                            <td></td>
-                            <td></td>
-                            <td>1</td>
-                            <td>2</td>
-                            <td>3</td>
-                            <td class="c_blue">4</td>
-                        </tr>
-                        <tr>
-                            <td class="c_red">5</td>
-                            <td>6</td>
-                            <td>7</td>
-                            <td>8</td>
-                            <td>9</td>
-                            <td>10</td>
-                            <td class="c_blue">11</td>
-                        </tr>
-                        <tr>
-                            <td class="c_red">12</td>
-                            <td>13</td>
-                            <td>14</td>
-                            <td>15</td>
-                            <td>16</td>
-                            <td>17</td>
-                            <td class="c_blue">18</td>
-                        </tr>
-                        <tr>
-                            <td class="c_red d_day">19</td>
-                            <td>20</td>
-                            <td>21</td>
-                            <td>22</td>
-                            <td>23</td>
-                            <td>24</td>
-                            <td class="c_blue">25</td>
-                        </tr>
-                        <tr>
-                            <td class="c_red">26</td>
-                            <td>27</td>
-                            <td>28</td>
-                            <td>29</td>
-                            <td>30</td>
-                            <td>31</td>
-                            <td></td>
-                        </tr>
-                    </tbody>
-                </table>
-            </div>
-            <div class="timer">
-                <p>철수♥영희 결혼식까지</p>
-                <div class="time">
-                    <span id="d-day-day">00</span>
-                    <span class="col">일 </span>
-                    <span id="d-day-hour">00</span>
-                    <span class="col">시간</span>
-                    <span id="d-day-min">00</span>
-                    <span class="col">분</span>
-                    <span id="d-day-sec">00</span>
-                    <span class="col">초</span>
-                </div>
-            </div>
-        </section>
-
-        <section class="gallery">
-            <h3>gallery</h3>
-            <ul>
-                <li><a href="javascript:" onclick=""><img src="img/img.jpg" alt=""></a></li>
-                <li><a href="javascript:" onclick=""><img src="img/img2.jpg" alt=""></a></li>
-                <li><a href="javascript:" onclick=""><img src="img/img.jpg" alt=""></a></li>
-                <li><a href="javascript:" onclick=""><img src="img/img2.jpg" alt=""></a></li>
-                <li><a href="javascript:" onclick=""><img src="img/img.jpg" alt=""></a></li>
-                <li><a href="javascript:" onclick=""><img src="img/img2.jpg" alt=""></a></li>
-                <li><a href="javascript:" onclick=""><img src="img/img.jpg" alt=""></a></li>
-                <li><a href="javascript:" onclick=""><img src="img/img2.jpg" alt=""></a></li>
-                <li><a href="javascript:" onclick=""><img src="img/img.jpg" alt=""></a></li>
-                <li><a href="javascript:" onclick=""><img src="img/img2.jpg" alt=""></a></li>
-            </ul>
-        </section>
-
-        <section class="location">
-            <h3>오시는 길</h3>
-            <div class="wedding_hall">
-                <h4>
-                    벨라루체 서울
-                    <span>2층 벨라홀</span>
-                </h4>
-                <p class="address" id="addressDetail">서울 동대문구 망우로 61</p>
-                <a class="icon_tel" href="tel:02-2242-6312">
-                    02-2242-6312
-                    <img src="img/icon_tel.png" alt="">
-                </a>
-            </div>
-            <div id="map" class="map"></div>
-            <code id="snippet" class="snippet"></code>
-            <script id="code">
-                var bellaluce = new naver.maps.LatLng(37.590055, 127.059928)
-                var map = new naver.maps.Map('map', {
-                center: new naver.maps.LatLng(37.590055, 127.059928),
-                zoom: 17,
-                minZoom: 8, //지도의 최소 줌 레벨
-                zoomControl: false, //줌 컨트롤의 표시 여부
-                // zoomControlOptions: { //줌 컨트롤의 옵션
-                //     position: naver.maps.Position.TOP_RIGHT
-                // }
-                });
-                var marker = new naver.maps.Marker({
-                    icon: {
-                    url: "./img/marker.png",
-                    scaledSize: new naver.maps.Size(27, 40),
-                    origin: new naver.maps.Point(0, 0),
-                    },
-                    position: bellaluce,
-                    map: map
-                });
-
-                var contentString = [
-                '<div class="iw_inner" style="padding:5px; margin: 0; width: 150px; text-align: center; ">',
-                '   <p style="foint-size: 2rem; margin: 0; line-height: 1.2;">벨라루체 서울</p>',
-                '   <p style="font-size: 0.8rem; margin: 0;">서울 동대문구 망우로 61</p>',
-                '</div>'
-                ].join('');
-
-                var infowindow = new naver.maps.InfoWindow({
-                    content: contentString,
-                    maxWidth: 200,
-                    height: 50,
-                    backgroundColor: "white",
-                    borderColor: "#7a7a7a",
-                    borderWidth: 2,
-                    disableAnchor: true,
-                    textAlign: "center",
-                    margin: "auto",
-
-                    pixelOffset: new naver.maps.Point(0, -5)
-                });
-
-                naver.maps.Event.addListener(marker, "click", function(e) {
-                    if (infowindow.getMap()) {
-                        infowindow.close();
-                    } else {
-                        infowindow.open(map, marker);
-                    }
-                });
-
-                infowindow.open(map, marker);
-            </script>
-            
-            <ul class="map_list">
-                <li>
-                    <a href="tmap://?rGoName=%EB%B2%A8%EB%9D%BC%EB%A3%A8%EC%B2%B4%EC%9B%A8%EB%94%A9%ED%99%80%20%EC%84%9C%EC%9A%B8%EC%A0%90&rGoX=127.059928&rGoY=37.590055">
-                        <img src="./img/tmap.png" alt="">
-                        <span>티맵</span>
-                    </a>
-                </li>
-                <li>
-                    <a href="javascript: startNavigation();">
-                        <img src="./img/kakaonav.png" alt="">
-                        <span>카카오내비</span>
-                    </a>
-                </li>
-                <li>
-                    <a target="_blank" href="https://map.naver.com/p/directions/-/14144253.4315262,4521654.3974551,%EB%B2%A8%EB%9D%BC%EB%A3%A8%EC%B2%B4%EC%9B%A8%EB%94%A9%ED%99%80%20%EC%84%9C%EC%9A%B8%EC%A0%90,1036896821,PLACE_POI/-/car?c=15.00,0,0,0,dh">
-                        <img src="./img/navermap.jpg" alt="">
-                        <span>네이버지도</span>
-                    </a>
-                </li>
-            </ul>
-            
-            <div class="transfer_info">
-                <div class="subway">
-                    <h3>지하철</h3>
+                <a href="javascript:" onclick="$('.tel .slide_tel').slideToggle();" class="tel_btn">혼주에게 연락하기</a>
+                <div class="slide_tel">
                     <ul>
-                        <li>- <span class="sub_line line_1">1호선</span><span class="sub_line line_kyeongui">경의중앙</span><span class="sub_line line_kyeongchun">경춘선</span></li>
-                        <li>- 회기역 2번 출구 바로 앞회기역 2번 출구 바로 앞</li>
-                    </ul>
-                </div>
-                <div class="bus">
-                    <h3>버스</h3>
-                    <ul>
-                        <li>- 삼육서울병원 하차 (정류장번호 : 06011, 06012)</li>
-                        <li>
-                            <span class="bus_line line1">간선버스</span>
-                            <span class="bus_num">105, 201, 202, 241, 260, 270, 271, 272105, 201, 202, 241, 260, 270, 271, 272</span>
+                        <li class="groom">
+                            <p class="tel_tit">신랑측</p>
+                            <ul class="parents_tel">
+                                <li>
+                                    <span>아버지</span> 최철수
+                                    <div class="icon_box">
+                                        <a class="icon_tel" href="tel:010-1234-1234">
+                                            <img src="img/icon_tel_blue.png" alt="">
+                                        </a>
+                                        <a class="icon_message" href="sms:01012341234">
+                                            <img src="img/icon_message_blue.png" alt="">
+                                        </a>
+                                    </div>
+                                </li>
+                                <li>
+                                    <span>어머니</span> 김영희
+                                    <div class="icon_box">
+                                        <a class="icon_tel" href="tel:010-1234-1234">
+                                            <img src="img/icon_tel_blue.png" alt="">
+                                        </a>
+                                        <a class="icon_message" href="sms:01012341234">
+                                            <img src="img/icon_message_blue.png" alt="">
+                                        </a>
+                                    </div>
+                                </li>
+                            </ul>
                         </li>
-                        <li>
-                            <span class="bus_line line2">지선버스</span>
-                            <span class="bus_num">1213, 1224, 1227, 2115, 22111213, 1224, 1227, 2115, 2211, 30, 51, 65, 88, 165, 166, 166-1, 170, 202, 707</span>
-                        </li>
-                        <li>
-                            <span class="bus_line line3">직행버스</span>
-                            <span class="bus_num">1330-2, 1330-3, 1330-4, 1330-44, 3200, 8005</span>
-                        </li>
-                        <li>
-                            <span class="bus_line line4">좌석버스</span>
-                            <span class="bus_num">330-1</span>
+                        <li class="bride">
+                            <p class="tel_tit">신부측</p>
+                            <ul class="parents_tel">
+                                <li>
+                                    <span>아버지</span> 최철수
+                                    <div class="icon_box">
+                                        <a class="icon_tel" href="tel:010-1234-1234">
+                                            <img src="img/icon_tel_pink.png" alt="">
+                                        </a>
+                                        <a class="icon_message" href="sms:01012341234">
+                                            <img src="img/icon_message_pink.png" alt="">
+                                        </a>
+                                    </div>
+                                </li>
+                                <li>
+                                    <span>어머니</span> 김영희
+                                    <div class="icon_box">
+                                        <a class="icon_tel" href="tel:010-1234-1234">
+                                            <img src="img/icon_tel_pink.png" alt="">
+                                        </a>
+                                        <a class="icon_message" href="sms:01012341234">
+                                            <img src="img/icon_message_pink.png" alt="">
+                                        </a>
+                                    </div>
+                                </li>
+                            </ul>
                         </li>
                     </ul>
                 </div>
-                <div class="car">
-                    <h3>자가용</h3>
-                    <ul>
-                        <li>- 네비게이션 : "벨라루체 서울" 또는 "벨라루체웨딩홀 서울점" 입력</li>
-                        <li>- 주소 검색 : "서울 망우로 61" 또는 "서울 휘경동 267-9" 검색</li>
-                        <li class="parking_info">※ 주차장이 혼잡할 수 있사오니 가급적 대중교통을 이용해 주시기 바랍니다.</li>
-                    </ul>
+            </section>
+    
+            <section class="calendar">
+                <div class="table_box">
+                    <h1>10</h1>
+                    <table>
+                        <colgroup>
+                        </colgroup>
+                        <thead>
+                            <tr>
+                                <!-- <td class="c_red">Sun</td>
+                                <td>Mon</td>
+                                <td>Tue</td>
+                                <td>Wed</td>
+                                <td>Thu</td>
+                                <td>Fri</td>
+                                <td class="c_blue">Sat</td> -->
+                                <!-- <td class="c_red">S</td>
+                                <td>M</td>
+                                <td>T</td>
+                                <td>W</td>
+                                <td>T</td>
+                                <td>F</td>
+                                <td class="c_blue">S</td> -->
+                                <td class="c_red">일</td>
+                                <td>월</td>
+                                <td>화</td>
+                                <td>수</td>
+                                <td>목</td>
+                                <td>금</td>
+                                <td class="c_blue">토</td>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr>
+                                <td></td>
+                                <td></td>
+                                <td></td>
+                                <td>1</td>
+                                <td>2</td>
+                                <td>3</td>
+                                <td class="c_blue">4</td>
+                            </tr>
+                            <tr>
+                                <td class="c_red">5</td>
+                                <td>6</td>
+                                <td>7</td>
+                                <td>8</td>
+                                <td>9</td>
+                                <td>10</td>
+                                <td class="c_blue">11</td>
+                            </tr>
+                            <tr>
+                                <td class="c_red">12</td>
+                                <td>13</td>
+                                <td>14</td>
+                                <td>15</td>
+                                <td>16</td>
+                                <td>17</td>
+                                <td class="c_blue">18</td>
+                            </tr>
+                            <tr>
+                                <td class="c_red d_day">19</td>
+                                <td>20</td>
+                                <td>21</td>
+                                <td>22</td>
+                                <td>23</td>
+                                <td>24</td>
+                                <td class="c_blue">25</td>
+                            </tr>
+                            <tr>
+                                <td class="c_red">26</td>
+                                <td>27</td>
+                                <td>28</td>
+                                <td>29</td>
+                                <td>30</td>
+                                <td>31</td>
+                                <td></td>
+                            </tr>
+                        </tbody>
+                    </table>
                 </div>
-            </div>
-        </section>
-
-        <section class="account pos_r">
-            <h3>마음 전하실 곳</h3>
-            <p>멀리서도 축하의 마음을<br>전하고 싶으신 분들을 위해<br>계좌번호를 안내드립니다.</p>
-            <p>소중한 축하를 보내주셔서 감사드리며,<br>따뜻한 마음에 깊이 감사드립니다.</p>
-            <div class="account_info">
+                <div class="timer">
+                    <p>철수♥영희 결혼식까지</p>
+                    <div class="time">
+                        <span id="d-day-day">00</span>
+                        <span class="col">일 </span>
+                        <span id="d-day-hour">00</span>
+                        <span class="col">시간</span>
+                        <span id="d-day-min">00</span>
+                        <span class="col">분</span>
+                        <span id="d-day-sec">00</span>
+                        <span class="col">초</span>
+                    </div>
+                </div>
+            </section>
+    
+            <section class="gallery">
+                <h3>gallery</h3>
                 <ul>
-                    <li class="groom">
-                        <a href="javascript:" onclick="$(this).siblings('.slide_account').slideToggle(); $(this).children('.arrow_btn').toggleClass('on')">신랑측 <span class="arrow_btn"><img src="./img/arrow_blue.png" alt="펼쳐보기"></span></a>
-                        <ul class="slide_account">
-                            <li class="pos_r">
-                                <p>신랑</p>
-                                <span class="num">010-9048-3772</span>
-                                <span class="bank">한국은행 최철수</span>
-                                <a href="javascript:" class="copy_btn">복사</a>
-                            </li>
-                            <li class="pos_r">
-                                <p>신랑 아버지</p>
-                                <span class="num">123456789-12-123456</span>
-                                <span class="bank">한국은행 홍길동</span>
-                                <a href="javascript:" class="copy_btn">복사</a>
-                            </li>
-                            <li class="pos_r">
-                                <p>신랑 어머니</p>
-                                <span class="num">123456789-12-123456</span>
-                                <span class="bank">한국은행 홍길동</span>
-                                <a href="javascript:" class="copy_btn">복사</a>
-                            </li>
-                        </ul>
+                    <li><a href="javascript:" onclick=""><img src="img/img.jpg" alt=""></a></li>
+                    <li><a href="javascript:" onclick=""><img src="img/img2.jpg" alt=""></a></li>
+                    <li><a href="javascript:" onclick=""><img src="img/img.jpg" alt=""></a></li>
+                    <li><a href="javascript:" onclick=""><img src="img/img2.jpg" alt=""></a></li>
+                    <li><a href="javascript:" onclick=""><img src="img/img.jpg" alt=""></a></li>
+                    <li><a href="javascript:" onclick=""><img src="img/img2.jpg" alt=""></a></li>
+                    <li><a href="javascript:" onclick=""><img src="img/img.jpg" alt=""></a></li>
+                    <li><a href="javascript:" onclick=""><img src="img/img2.jpg" alt=""></a></li>
+                    <li><a href="javascript:" onclick=""><img src="img/img.jpg" alt=""></a></li>
+                    <li><a href="javascript:" onclick=""><img src="img/img2.jpg" alt=""></a></li>
+                </ul>
+            </section>
+    
+            <section class="location">
+                <h3>오시는 길</h3>
+                <div class="wedding_hall">
+                    <h4>
+                        벨라루체 서울
+                        <span>2층 벨라홀</span>
+                    </h4>
+                    <p class="address" id="addressDetail">서울 동대문구 망우로 61</p>
+                    <a class="icon_tel" href="tel:02-2242-6312">
+                        02-2242-6312
+                        <img src="img/icon_tel.png" alt="">
+                    </a>
+                </div>
+                <div id="map" class="map"></div>
+                <code id="snippet" class="snippet"></code>
+                <script id="code">
+                    var bellaluce = new naver.maps.LatLng(37.590055, 127.059928)
+                    var map = new naver.maps.Map('map', {
+                    center: new naver.maps.LatLng(37.590055, 127.059928),
+                    zoom: 17,
+                    minZoom: 8, //지도의 최소 줌 레벨
+                    zoomControl: false, //줌 컨트롤의 표시 여부
+                    // zoomControlOptions: { //줌 컨트롤의 옵션
+                    //     position: naver.maps.Position.TOP_RIGHT
+                    // }
+                    });
+                    var marker = new naver.maps.Marker({
+                        icon: {
+                        url: "./img/marker.png",
+                        scaledSize: new naver.maps.Size(27, 40),
+                        origin: new naver.maps.Point(0, 0),
+                        },
+                        position: bellaluce,
+                        map: map
+                    });
+    
+                    var contentString = [
+                    '<div class="iw_inner" style="padding:5px; margin: 0; width: 150px; text-align: center; ">',
+                    '   <p style="foint-size: 2rem; margin: 0; line-height: 1.2;">벨라루체 서울</p>',
+                    '   <p style="font-size: 0.8rem; margin: 0;">서울 동대문구 망우로 61</p>',
+                    '</div>'
+                    ].join('');
+    
+                    var infowindow = new naver.maps.InfoWindow({
+                        content: contentString,
+                        maxWidth: 200,
+                        height: 50,
+                        backgroundColor: "white",
+                        borderColor: "#7a7a7a",
+                        borderWidth: 2,
+                        disableAnchor: true,
+                        textAlign: "center",
+                        margin: "auto",
+    
+                        pixelOffset: new naver.maps.Point(0, -5)
+                    });
+    
+                    naver.maps.Event.addListener(marker, "click", function(e) {
+                        if (infowindow.getMap()) {
+                            infowindow.close();
+                        } else {
+                            infowindow.open(map, marker);
+                        }
+                    });
+    
+                    infowindow.open(map, marker);
+                </script>
+                
+                <ul class="map_list">
+                    <li>
+                        <a href="tmap://?rGoName=%EB%B2%A8%EB%9D%BC%EB%A3%A8%EC%B2%B4%EC%9B%A8%EB%94%A9%ED%99%80%20%EC%84%9C%EC%9A%B8%EC%A0%90&rGoX=127.059928&rGoY=37.590055">
+                            <img src="./img/tmap.png" alt="">
+                            <span>티맵</span>
+                        </a>
                     </li>
-                    <li class="bride">
-                        <a href="javascript:" onclick="$(this).siblings('.slide_account').slideToggle(); $(this).children('.arrow_btn').toggleClass('on')">신부측 <span class="arrow_btn"><img src="./img/arrow_pink.png" alt="펼쳐보기"></span></a>
-                        <ul class="slide_account">
-                            <li class="pos_r">
-                                <p>신부</p>
-                                <span class="num">123456789-12-123456</span>
-                                <span class="bank">한국은행 최철수</span>
-                                <a href="javascript:" class="copy_btn">복사</a>
-                            </li>
-                            <li class="pos_r">
-                                <p>신부 아버지</p>
-                                <span class="num">123456789-12-123456</span>
-                                <span class="bank">한국은행 홍길동</span>
-                                <a href="javascript:" class="copy_btn">복사</a>
-                            </li>
-                            <li class="pos_r">
-                                <p>신부 어머니</p>
-                                <span class="num">123456789-12-123456</span>
-                                <span class="bank">한국은행 홍길동</span>
-                                <a href="javascript:" class="copy_btn">복사</a>
-                            </li>
-                        </ul>
+                    <li>
+                        <a href="javascript: startNavigation();">
+                            <img src="./img/kakaonav.png" alt="">
+                            <span>카카오내비</span>
+                        </a>
+                    </li>
+                    <li>
+                        <a target="_blank" href="https://map.naver.com/p/directions/-/14144253.4315262,4521654.3974551,%EB%B2%A8%EB%9D%BC%EB%A3%A8%EC%B2%B4%EC%9B%A8%EB%94%A9%ED%99%80%20%EC%84%9C%EC%9A%B8%EC%A0%90,1036896821,PLACE_POI/-/car?c=15.00,0,0,0,dh">
+                            <img src="./img/navermap.jpg" alt="">
+                            <span>네이버지도</span>
+                        </a>
                     </li>
                 </ul>
-                <p class="copied_msg">복사되었습니다.</p>
-            </div>
-        </section>
-
-        <section class="video">
-            <h3>식전영상</h3>
-            <iframe src="https://www.youtube.com/embed/YBk4SAqpYaQ?autoplay=1&mute=1&rel=0" frameborder="0"></iframe>
-        </section>
-
-        <section class="closing">
-            <img src="./img/img.jpg" alt="">
-        </section>
-        
-        <section class="share">
-            <a href="javascript:" onclick="shareKakao();" class="shareKakao"><img src="./img/icon_kakao2.png" alt="카카오톡">카카오톡 공유하기</a>
-            <a class="copy_link"><img src="./img/icon_link.png" alt="URL 복사">URL 복사하기</a>
-        </section>
-
-        <div class="copyright">ⓒ 2025. Yeyoung Kim All rights reserved</div>
+                
+                <div class="transfer_info">
+                    <div class="subway">
+                        <h3>지하철</h3>
+                        <ul>
+                            <li>- <span class="sub_line line_1">1호선</span><span class="sub_line line_kyeongui">경의중앙</span><span class="sub_line line_kyeongchun">경춘선</span></li>
+                            <li>- 회기역 2번 출구 바로 앞회기역 2번 출구 바로 앞</li>
+                        </ul>
+                    </div>
+                    <div class="bus">
+                        <h3>버스</h3>
+                        <ul>
+                            <li>- 삼육서울병원 하차 (정류장번호 : 06011, 06012)</li>
+                            <li>
+                                <span class="bus_line line1">간선버스</span>
+                                <span class="bus_num">105, 201, 202, 241, 260, 270, 271, 272105, 201, 202, 241, 260, 270, 271, 272</span>
+                            </li>
+                            <li>
+                                <span class="bus_line line2">지선버스</span>
+                                <span class="bus_num">1213, 1224, 1227, 2115, 22111213, 1224, 1227, 2115, 2211, 30, 51, 65, 88, 165, 166, 166-1, 170, 202, 707</span>
+                            </li>
+                            <li>
+                                <span class="bus_line line3">직행버스</span>
+                                <span class="bus_num">1330-2, 1330-3, 1330-4, 1330-44, 3200, 8005</span>
+                            </li>
+                            <li>
+                                <span class="bus_line line4">좌석버스</span>
+                                <span class="bus_num">330-1</span>
+                            </li>
+                        </ul>
+                    </div>
+                    <div class="car">
+                        <h3>자가용</h3>
+                        <ul>
+                            <li>- 네비게이션 : "벨라루체 서울" 또는 "벨라루체웨딩홀 서울점" 입력</li>
+                            <li>- 주소 검색 : "서울 망우로 61" 또는 "서울 휘경동 267-9" 검색</li>
+                            <li class="parking_info">※ 주차장이 혼잡할 수 있사오니 가급적 대중교통을 이용해 주시기 바랍니다.</li>
+                        </ul>
+                    </div>
+                </div>
+            </section>
+    
+            <section class="account pos_r">
+                <h3>마음 전하실 곳</h3>
+                <p>멀리서도 축하의 마음을<br>전하고 싶으신 분들을 위해<br>계좌번호를 안내드립니다.</p>
+                <p>소중한 축하를 보내주셔서 감사드리며,<br>따뜻한 마음에 깊이 감사드립니다.</p>
+                <div class="account_info">
+                    <ul>
+                        <li class="groom">
+                            <a href="javascript:" onclick="$(this).siblings('.slide_account').slideToggle(); $(this).children('.arrow_btn').toggleClass('on')">신랑측 <span class="arrow_btn"><img src="./img/arrow_blue.png" alt="펼쳐보기"></span></a>
+                            <ul class="slide_account">
+                                <li class="pos_r">
+                                    <p>신랑</p>
+                                    <span class="num">010-9048-3772</span>
+                                    <span class="bank">한국은행 최철수</span>
+                                    <a href="javascript:" class="copy_btn">복사</a>
+                                </li>
+                                <li class="pos_r">
+                                    <p>신랑 아버지</p>
+                                    <span class="num">123456789-12-123456</span>
+                                    <span class="bank">한국은행 홍길동</span>
+                                    <a href="javascript:" class="copy_btn">복사</a>
+                                </li>
+                                <li class="pos_r">
+                                    <p>신랑 어머니</p>
+                                    <span class="num">123456789-12-123456</span>
+                                    <span class="bank">한국은행 홍길동</span>
+                                    <a href="javascript:" class="copy_btn">복사</a>
+                                </li>
+                            </ul>
+                        </li>
+                        <li class="bride">
+                            <a href="javascript:" onclick="$(this).siblings('.slide_account').slideToggle(); $(this).children('.arrow_btn').toggleClass('on')">신부측 <span class="arrow_btn"><img src="./img/arrow_pink.png" alt="펼쳐보기"></span></a>
+                            <ul class="slide_account">
+                                <li class="pos_r">
+                                    <p>신부</p>
+                                    <span class="num">123456789-12-123456</span>
+                                    <span class="bank">한국은행 최철수</span>
+                                    <a href="javascript:" class="copy_btn">복사</a>
+                                </li>
+                                <li class="pos_r">
+                                    <p>신부 아버지</p>
+                                    <span class="num">123456789-12-123456</span>
+                                    <span class="bank">한국은행 홍길동</span>
+                                    <a href="javascript:" class="copy_btn">복사</a>
+                                </li>
+                                <li class="pos_r">
+                                    <p>신부 어머니</p>
+                                    <span class="num">123456789-12-123456</span>
+                                    <span class="bank">한국은행 홍길동</span>
+                                    <a href="javascript:" class="copy_btn">복사</a>
+                                </li>
+                            </ul>
+                        </li>
+                    </ul>
+                    <p class="copied_msg">복사되었습니다.</p>
+                </div>
+            </section>
+    
+            <section class="video">
+                <h3>식전영상</h3>
+                <iframe src="https://www.youtube.com/embed/YBk4SAqpYaQ?autoplay=1&mute=1&rel=0" frameborder="0"></iframe>
+            </section>
+    
+            <section class="closing">
+                <img src="./img/img.jpg" alt="">
+            </section>
+            
+            <section class="share">
+                <a href="javascript:" onclick="shareKakao();" class="shareKakao"><img src="./img/icon_kakao2.png" alt="카카오톡">카카오톡 공유하기</a>
+                <a class="copy_link"><img src="./img/icon_link.png" alt="URL 복사">URL 복사하기</a>
+            </section>
+    
+            <div class="copyright">ⓒ 2025. Yeyoung Kim All rights reserved</div>
+        </div>
     </div>
 </body>
 </html>

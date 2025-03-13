@@ -1,3 +1,22 @@
+// 로딩화면 애니메이션
+document.addEventListener('DOMContentLoaded', () => {
+    setTimeout(() => {
+        const introText = document.querySelectorAll(".loading span");
+
+        let timer = 100;
+        introText.forEach((item) => {
+            item.style.animation = `fade 500ms ${(timer += 50)}ms forwards`;
+        });
+    }, 500);
+});
+
+window.onload = function(){
+    setTimeout(function () {
+        $("html").css("overflow",'auto'); 
+        $(".loading").fadeOut();
+    }, 2700);
+};
+
 // 디데이 타이머
 function remaindTime() {
     var now = new Date(); //현재시간을 구한다.

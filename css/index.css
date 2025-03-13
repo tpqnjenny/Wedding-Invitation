@@ -7,6 +7,7 @@ html,
 body {width: 100vw; max-width: 500px; margin: 0 auto; padding: 0; cursor: default; overflow-x: hidden;}
 
 *{font-family: 'GowunDodum-Regular', sans-serif;}
+html{overflow : 'hidden';}
 .mobile{width: 100%; max-width: 500px; margin: 0 auto; padding-bottom: 15%; border-left: 1px solid #ccc; border-right: 1px solid #ccc; box-shadow: 0px 0px 20px 0px #e0e0e0; position: relative; overflow-x: hidden;}
 section{width: 100%; margin-bottom: 20%; text-align: center;}
 .copyright{text-align: center; font-size: 12px; color: #505050;}
@@ -26,10 +27,25 @@ section{width: 100%; margin-bottom: 20%; text-align: center;}
     font-style: normal;
 }
 
-/* scroll bar custom */
-/* .mobile::-webkit-scrollbar {width: 5px;}
-.mobile::-webkit-scrollbar-thumb {background: #aaaaaa; 스크롤바 색상 border-radius: 10px; 스크롤바 둥근 테두리 }
-.mobile::-webkit-scrollbar-track {background: rgb(236, 236, 236);  스크롤바 뒷 배경 색상} */
+.rochester-regular {
+    font-family: "Rochester", cursive;
+    font-weight: 400;
+    font-style: normal;
+}
+
+/* 로딩화면 */
+.loading{position: fixed; top: 0; left: 0; width: 100vw; height: 100vh; background-color: rgb(255 255 255 / 90%); z-index: 3;}
+.loading .loading_con{width: 80%; position: absolute; top: 50%; left: 50%; transform: translate(-50%, -50%); text-align: center;}
+.loading .loading_con h1{margin-bottom: 2%;}
+.loading .loading_con h1 span{display: inline-block; font-size: 42px; font-family: "Rochester", sans-serif; letter-spacing: -8px; opacity: 0;}
+.loading .loading_con h3 span{display: inline-block; letter-spacing: -5px; opacity: 0;}
+.loading .loading_con h3 .fc_red{color: rgb(255, 69, 69);}
+
+@keyframes fade {
+    to {
+        opacity: 1;
+    }
+}
 
 .main{position: relative;}
 .main .bg{width: 100%; height: 100%; position: absolute; top: 0; left: 0; background: linear-gradient(180deg, transparent 70%, #fff 95%);}
