@@ -69,7 +69,7 @@ section{width: 100%; margin-bottom: 20%; text-align: center;}
 .calendar .table_box table{width: 100%;}
 .calendar .table_box table thead td{padding: 5% 0;}
 .calendar .table_box table tbody td{padding: 3% 0;}
-.calendar .table_box table tbody td.d_day{position: relative; color: #fff; background: url(./img/calendar_heart.png) no-repeat center center / contain;}
+.calendar .table_box table tbody td.d_day{position: relative; color: #fff; background: url(../img/calendar_heart.png) no-repeat center center / contain;}
 .calendar .table_box table tbody td.d_day::after{content: '오후2:30'; width: 100%; position: absolute; bottom: -20%; left: 50%; transform: translateX(-50%); font-size: 10px; color: #f93f3f; z-index: 1;}
 
 .calendar .timer{margin-top: 10%;}
