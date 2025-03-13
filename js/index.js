@@ -14,7 +14,7 @@ window.onload = function(){
     setTimeout(function () {
         $("html").css("overflow",'auto'); 
         $(".loading").fadeOut();
-    }, 2700);
+    }, 2500);
 };
 
 // 디데이 타이머
