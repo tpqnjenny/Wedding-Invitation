@@ -125,4 +125,15 @@ $(document).ready(function() {
             msg.css({ bottom: "-30%", opacity: 0});
         }, 1500);
     });
+
+    // waypoint
+    var target = $('.mobile section:not(:first-child)');
+
+    target.each(function (i, v) {
+        $(this).waypoint(function () {
+            $(v).addClass('fadeInUp')
+        }, {
+            offset: '80%'
+        })
+    })
 });
