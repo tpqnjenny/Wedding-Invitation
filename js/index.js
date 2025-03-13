@@ -1,20 +1,29 @@
 // 로딩화면 애니메이션
 document.addEventListener('DOMContentLoaded', () => {
     setTimeout(() => {
-        const introText = document.querySelectorAll(".loading span");
+        const introText_tit = document.querySelectorAll(".loading h1 span");
 
         let timer = 100;
-        introText.forEach((item) => {
-            item.style.animation = `fade 500ms ${(timer += 50)}ms forwards`;
+        introText_tit.forEach((item) => {
+            item.style.animation = `fade 500ms ${(timer += 70)}ms forwards`;
         });
     }, 500);
+
+    setTimeout(() => {
+        const introText_sub = document.querySelectorAll(".loading h3 span");
+
+        let timer = 100;
+        introText_sub.forEach((item) => {
+            item.style.animation = `fade 500ms ${(timer += 70)}ms forwards`;
+        });
+    }, 2000);
 });
 
 window.onload = function(){
     setTimeout(function () {
         $("html").css("overflow",'auto'); 
         $(".loading").fadeOut();
-    }, 2500);
+    }, 4000);
 };
 
 // 디데이 타이머

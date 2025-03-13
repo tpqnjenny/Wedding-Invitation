@@ -35,7 +35,7 @@ section{width: 100%; margin-bottom: 20%; text-align: center;}
 
 /* 로딩화면 */
 .loading{position: fixed; top: 0; left: 0; width: 100vw; height: 100vh; background-color: rgb(255 255 255 / 90%); z-index: 3;}
-.loading .loading_con{width: 80%; position: absolute; top: 50%; left: 50%; transform: translate(-50%, -50%); text-align: center;}
+.loading .loading_con{width: 80%; position: absolute; top: 40%; left: 50%; transform: translate(-50%, -50%); text-align: center;}
 .loading .loading_con h1{margin-bottom: 2%;}
 .loading .loading_con h1 span{display: inline-block; font-size: 42px; font-family: "Rochester", sans-serif; letter-spacing: -8px; opacity: 0;}
 .loading .loading_con h3 span{display: inline-block; letter-spacing: -5px; opacity: 0;}
