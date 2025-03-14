@@ -68,22 +68,23 @@ function remaindTime() {
 setInterval(remaindTime, 1000);
 
 $(document).ready(function() {
-    $('.gallery ul li').each(function() {
-        var $li = $(this);
-        var $img = $li.find('img');
+    $('.gallery #bx-pager a').each(function() {
+        var $box = $(this);
+        var $img = $box.find('img');
         
-        $img.on('load', function() {
-            var liHeight = $li.height();
-            var imgHeight = $img.height();
-            
-            // 이미지 비율 유지하며 조정
-            var scaleFactor = liHeight / imgHeight;
-            
-            $img.css({
-                'transform': 'scale(' + scaleFactor + ')',
-                'transform-origin': 'center center'
-            });
-        });
+        var liHeight = $box.height();
+        var imgHeight = $img.height();
+        
+        if(liHeight > imgHeight){ // 가로사진일 때 box에 img 채우기
+            $img.each(function() {
+                var scaleFactor = liHeight / imgHeight;
+    
+                $img.css({
+                    'transform': 'translate(-50%, -50%) scale(' + scaleFactor + ')',
+                    'transform-origin': 'center center'
+                });
+            })
+        }
     });
 
     // 계좌번호 복사하기
@@ -136,4 +137,45 @@ $(document).ready(function() {
             offset: '80%'
         })
     })
+
+    $('.zoom_gallery').magnificPopup({
+		delegate: 'a',
+		type: 'image',
+		closeOnContentClick: false,
+		closeBtnInside: true,
+		mainClass: 'mfp-with-zoom mfp-img-mobile',
+
+		allowHTMLInTemplate: true,
+		image: {
+			verticalFit: true,
+		},
+
+		gallery: {
+			enabled: true,
+            arrowMarkup: '<button title="%title%" type="button" class="mfp-arrow mfp-arrow-%dir%"></button>',
+            tPrev: '이전',
+            tNext: '다음',
+            tCounter: '%curr% / %total%',
+            preload: [0, 2]
+		},
+		zoom: {
+			enabled: false,
+			duration: 300,
+			opener: function(element) {
+				return element.find('img');
+			}
+		},
+        callbacks: {
+            open: function() {
+                // 팝업이 열린 후 화살표를 특정 div에 추가
+                $('.mfp-arrow').appendTo('.mfp-content');
+                
+                // 필요에 따라 화살표 위치 조정을 위한 CSS 적용
+                $('.mfp-arrow').css({
+                    'position': 'absolute',
+                    'top': '50%',
+                });
+            }
+        }
+	});
 });
