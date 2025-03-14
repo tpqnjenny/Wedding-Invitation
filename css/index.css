@@ -165,7 +165,7 @@ section:not(:first-child){opacity: 0;}
 .share a{display: flex; justify-content: center; align-items: center; width: 70%; margin: 0 auto 3%; padding: 2% 0; font-size: 13px; border: 1px solid #969696; border-radius: 5px;}
 .share a img{width: 20px; height: 20px; margin-right: 3px;}
 
-.copied_msg{width: 70%; padding: 4% 0; position: fixed; bottom: -30%; left: 50%; transform: translateX(-50%); text-align: center; font-size: 16px; color: #fff; background: #4c4c4c; border-radius: 5px; box-shadow: 3px 3px 7px 1px #2e2e2e; opacity: 0; transition: all 0.5s ease-in-out;}
+.copied_msg{width: 70%; min-width: 350px; padding: 15px 0; position: fixed; bottom: -30%; left: 50%; transform: translateX(-50%); text-align: center; font-size: 16px; color: #fff; background: #4c4c4c; border-radius: 5px; box-shadow: 3px 3px 7px 1px #2e2e2e; opacity: 0; transition: all 0.5s ease-in-out;}
 
 /* waypoint */
 .fadeInUp{animation-name: fadeInUp; animation-duration: 1s; animation-fill-mode: both; visibility: visible;}
