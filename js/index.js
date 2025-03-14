@@ -68,7 +68,8 @@ function remaindTime() {
 setInterval(remaindTime, 1000);
 
 $(document).ready(function() {
-    $('.gallery #bx-pager a').each(function() {
+    // 갤러리 이미지 크기 맞춤
+    $('.gallery .zoom_gallery a').each(function() {
         var $box = $(this);
         var $img = $box.find('img');
         
@@ -138,6 +139,7 @@ $(document).ready(function() {
         })
     })
 
+    // gallery popup
     $('.zoom_gallery').magnificPopup({
 		delegate: 'a',
 		type: 'image',
