@@ -27,10 +27,7 @@
         var map = new naver.maps.Map(mapDiv);
     </script>
 
-    <!-- tmap -->
-    <script script src="https://apis.openapi.sk.com/tmap/jsv2?version=1&appKey=1U1LoVKtfX4q8T73M91efacIhzRBNkQk4NnJPiFe"></script>
-
-    <!-- kakako navi -->
+    <!-- kakao navi -->
     <script src="//developers.kakao.com/sdk/js/kakao.min.js"></script>
     <script src="https://t1.kakaocdn.net/kakao_js_sdk/2.7.4/kakao.min.js" integrity="sha384-DKYJZ8NLiK8MN4/C5P2dtSmLQ4KwPaoqAfyA/DfmEc1VDxu4yyC7wy6K1Hs90nka" crossorigin="anonymous"></script>
     <script>
@@ -50,8 +47,8 @@
             Kakao.Share.sendCustom({
                 templateId: 118316,
                 templateArgs: {
-                    title: '최철수♡김영희 결혼식에 초대합니다.',
-                    description: '2025년 10월 19일 오후 2시 30분.',
+                    title: '최성림♡김이영 결혼식에 초대합니다.',
+                    description: '2025년 10월 19일 오후 2시 30분',
                 },
             });
         }
@@ -120,18 +117,25 @@
                         <img src="img/main.jpg" alt="">
                     </div>
                     <div class="bg"></div>
-                    <!-- <p class="main_tit">We're<br>getting<br>married !</p> -->
-                    <!-- <p class="main_tit">SungLim<br>&<br>YeYoung</p> -->
-                    <div class="ani_wrap">
-                        
+                    <div class="ani_wrap" id="sakura_wrap">
+                        <!-- sakura animation -->
+                        <link rel="stylesheet" href="https://jhammann.github.io/sakura/dist/sakura.css">
+                        <style>
+                            .sakura{background: linear-gradient(120deg, rgba(207, 255, 50, 0.3), rgba(200, 226, 115, 0.9)) !important;}
+                        </style>
+                        <script src="https://jhammann.github.io/sakura/dist/sakura.js"></script>
+                        <script>
+                            var sakura = new Sakura('#sakura_wrap');
+                        </script>
                     </div>
                 </div>
-                <p class="main_tit2">성림 <span>and</span> 이영</p>
-    
+                <p class="main_tit">성림 <span>and</span> 이영</p>
+
                 <div class="main_info">
                     <p>2025년 10월 19일 일요일<br>오후 2시 30분</p>
                     <h3>벨라루체 서울 2층 벨라홀</h3>
                 </div>
+
             </section>
     
             <section class="invi_text">

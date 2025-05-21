@@ -12,7 +12,7 @@ document.addEventListener('DOMContentLoaded', () => {
                 
                 let timer = 100;
                 introText_tit.forEach((item) => {
-                    item.style.animation = `fade 500ms ${(timer += 70)}ms forwards`;
+                    item.style.animation = `fade 300ms ${(timer += 40)}ms forwards`;
                 });
             }, 200);
             
@@ -21,15 +21,15 @@ document.addEventListener('DOMContentLoaded', () => {
                 
                 let timer = 100;
                 introText_sub.forEach((item) => {
-                    item.style.animation = `fade 500ms ${(timer += 70)}ms forwards`;
+                    item.style.animation = `fade 300ms ${(timer += 50)}ms forwards`;
                 });
-            }, 1000);
+            }, 700);
             
             // 3초 후 로딩 화면 숨김
             setTimeout(function () {
                 document.querySelector("html").style.overflow = 'auto';
                 loadingElement.style.display = "none";
-            }, 3000);
+            }, 2500);
         }
     } else {
         // 스크롤 위치가 0이 아니면 로딩 화면 숨김
@@ -45,7 +45,7 @@ window.onload = function(){
     setTimeout(function () {
         $("html").css("overflow",'auto'); 
         $(".loading").fadeOut();
-    }, 3000);
+    }, 2500);
 };
 
 // 디데이 타이머
