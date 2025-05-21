@@ -34,6 +34,8 @@ section:not(:first-child){opacity: 0;}
     font-style: normal;
 }
 
+.contents{background: #fbfffa;}
+
 /* 로딩화면 */
 .loading{position: fixed; top: 0; left: 0; width: 100vw; height: 100vh; background-color: rgb(255 255 255 / 90%); z-index: 3;}
 .loading .loading_con{width: 80%; position: absolute; top: 40%; left: 50%; transform: translate(-50%, -50%); text-align: center;}
@@ -48,15 +50,18 @@ section:not(:first-child){opacity: 0;}
     }
 }
 
-.main{position: relative;}
-.main .bg{width: 100%; height: 100%; position: absolute; top: 0; left: 0; background: linear-gradient(180deg, transparent 70%, #fff 95%);}
-.main .main_tit{width: 70%; position: absolute; top: 2%; left: 50%; transform: translateX(-50%); line-height: 1; text-align: center; font-size: 66px; font-weight: bold; font-family: "Birthstone", sans-serif; color: #fff; text-shadow: 1px 3px 2px rgb(95 95 95);}
+.main{position: relative; padding-top: 80px;}
+.main .img_wrap{width: 92%; margin: 0 auto; border-radius: 45% 45% 0 0; overflow: hidden;}
+.main .bg{width: 100%; height: 100%; position: absolute; top: 0; left: 0; background: linear-gradient(180deg, transparent 80%, #fff 100%);}
+.main .main_tit{width: 70%; position: absolute; top: 4%; left: 50%; transform: translateX(-50%); line-height: 1; text-align: center; font-size: 66px; font-weight: bold; font-family: "Birthstone", sans-serif; color: #27770f; text-shadow: 1px 3px 2px rgb(255 255 255);}
+.main .main_tit2{width: 70%; position: absolute; top: 20px; left: 50%; transform: translateX(-50%); text-align: center; font-size: 28px; font-weight: bold; font-family: "Gowun Dodum", "Birthstone", sans-serif; color: #27770f; text-shadow: 1px 3px 2px rgb(255 255 255);}
+.main .main_tit2 span{margin-right: 5px; font-family: "Birthstone", sans-serif;}
 
 .main .main_info{width: 90%; margin: 0 auto; padding: 20px 0; text-align: center; border-top: 1px solid #999; border-bottom: 1px solid #999;}
 .main .main_info h3{margin-top: 10px;}
 
 .invi_text{text-align: center;}
-.invi_text h3{margin-bottom: 30px; color: #ea8a8a;}
+.invi_text h3{margin-bottom: 30px; color: #73945f;}
 .invi_text p{line-height: 1.5}
 
 .tel ul{width: 75%; margin: 0 auto;}
@@ -66,7 +71,7 @@ section:not(:first-child){opacity: 0;}
 .tel ul li .icon_box a{width: 20px; height: 20px; margin: 0 5px;}
 .tel .w40{display: inline-block; width: 40px; text-align: center;}
 
-.tel .tel_btn{display: block; width: 50%; margin: 30px auto 0; padding: 2% 0; text-align: center; color: #e66363; border: 1px solid #ea8a8a; border-radius: 5px; box-shadow: 3px 3px 5px 0px #bcbcbc;}
+.tel .tel_btn{display: block; width: 50%; margin: 30px auto 0; padding: 2% 0; text-align: center; color: #5d774e; border: 1px solid #9cc585; border-radius: 5px; box-shadow: 3px 3px 5px 0px #bcbcbc;}
 
 .tel .slide_tel{display: none; margin-top: 10%;}
 .tel .slide_tel li{margin-bottom: 15px; display: flex; justify-content: space-between; align-items: center;}
@@ -78,9 +83,9 @@ section:not(:first-child){opacity: 0;}
 .tel .slide_tel .parents_tel li{margin: 8px 0;}
 /* .tel .slide_tel p{padding: 0 2px 8px 2px; border-bottom: 1px solid #777;} */
 
-.calendar{padding: 5% 0; background: #fff7f7;}
+.calendar{padding: 5% 0; background: #f3faf0;}
 .calendar .table_box{width: 90%; margin: 5% auto;}
-.calendar .table_box h1{font-size: 30px; color: #df7a7a;}
+.calendar .table_box h1{font-size: 30px; color: #73945f;}
 .calendar .table_box .c_red{color: #f93f3f;}
 .calendar .table_box .c_blue{color: #5a64be;}
 .calendar .table_box table{width: 100%;}
@@ -94,7 +99,7 @@ section:not(:first-child){opacity: 0;}
 .calendar .timer .time{margin-bottom: 5%; font-size: 24px;}
 .calendar .timer .time .col{margin-left: -1%; margin-right: 2%; letter-spacing: -1px;}
 
-.gallery h3{margin-bottom: 10%; font-size: 22px; color: #e78c8c; letter-spacing: 1px;}
+.gallery h3{margin-bottom: 10%; font-size: 22px; color: #73945f; letter-spacing: 1px;}
 .gallery .zoom_gallery{width: 95%; margin: 0 auto; display: grid; grid-template-columns: repeat(3, 1fr); grid-template-rows: 130px 130px 130px; grid-gap: 10px;}
 .gallery .zoom_gallery a{position: relative; overflow: hidden;}
 .gallery .zoom_gallery a img{width: 100%; position: absolute; top: 50%; left: 50%; transform: translate(-50%, -50%);}
@@ -106,8 +111,8 @@ section:not(:first-child){opacity: 0;}
 .mfp-container .mfp-arrow-right{right: -7.5%; transform: scale(1); background: url(../img/next_btn.png) no-repeat center center / contain;}
 .mfp-container .mfp-arrow:before, .mfp-arrow:after{content: none;}
 
-.location{padding-top: 10%; background: #fff7f7;}
-.location h3{margin-bottom: 7%; color: #df7a7a; letter-spacing: 1px;}
+.location{padding-top: 10%; background: #f3faf0;}
+.location h3{margin-bottom: 7%; color: #73945f; letter-spacing: 1px;}
 .location h4{font-size: 16px; font-weight: normal; line-height: 1.5; display: flex; justify-content: center; align-items: center; flex-wrap: wrap; letter-spacing: 0.5px;}
 .location h4 span{display: block; width: 100%;}
 .location p{margin: 2% 0; font-size: 14px;}
@@ -140,8 +145,8 @@ section:not(:first-child){opacity: 0;}
 .location .transfer_info ul li .line3{background: #fb5852;}
 .location .transfer_info ul li .line4{background: #8841d2;}
 
-.account{padding: 10% 0 5%; background: #fff7f7;}
-.account h3{margin-bottom: 7%; color: #df7a7a; letter-spacing: 1px;}
+.account{padding: 10% 0 5%; background: #f3faf0;}
+.account h3{margin-bottom: 7%; color: #73945f; letter-spacing: 1px;}
 .account > p{margin-bottom: 5%; line-height: 1.7; font-size: 14px; color: #505050}
 .account .account_info{width: 93%; margin: 0 auto;}
 .account .account_info > ul > li{margin-bottom: 5%; border: 1px solid #ccc; border-radius: 10px; background: #fff; box-shadow: 3px 3px 3px 2px #f1f1f1;}
@@ -159,7 +164,7 @@ section:not(:first-child){opacity: 0;}
 .account .account_info ul .slide_account li span{display: block; margin-bottom: 2%; font-size: 14px;}
 .account .account_info ul .slide_account li .copy_btn{position: absolute; top: 50%; right: 5%; transform: translateY(-50%); padding: 1.5% 5%; font-size: 13px; color: #353535; border: 1px solid #ddd; border-radius: 3px; box-shadow: 2px 2px 2px 1px #f1f1f1;}
 
-.video h3{margin-bottom: 10%; color: #e78c8c; letter-spacing: 1px;}
+.video h3{margin-bottom: 10%; color: #73945f; letter-spacing: 1px;}
 .video iframe{width: 93%; height: 52vw; max-height: 260px;}
 
 .share a{display: flex; justify-content: center; align-items: center; width: 70%; margin: 0 auto 3%; padding: 2% 0; font-size: 13px; border: 1px solid #969696; border-radius: 5px;}

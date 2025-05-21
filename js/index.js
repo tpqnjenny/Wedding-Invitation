@@ -1,29 +1,51 @@
 // 로딩화면 애니메이션
 document.addEventListener('DOMContentLoaded', () => {
-    setTimeout(() => {
-        const introText_tit = document.querySelectorAll(".loading h1 span");
-
-        let timer = 100;
-        introText_tit.forEach((item) => {
-            item.style.animation = `fade 500ms ${(timer += 70)}ms forwards`;
-        });
-    }, 500);
-
-    setTimeout(() => {
-        const introText_sub = document.querySelectorAll(".loading h3 span");
-
-        let timer = 100;
-        introText_sub.forEach((item) => {
-            item.style.animation = `fade 500ms ${(timer += 70)}ms forwards`;
-        });
-    }, 2000);
+    // 화면이 최상단에 위치할 때만 로딩화면 나타나게
+    if (window.scrollY === 0) {
+        // 로딩 화면 표시
+        const loadingElement = document.querySelector(".loading");
+        if (loadingElement) {
+            loadingElement.style.display = "block";
+            
+            setTimeout(() => {
+                const introText_tit = document.querySelectorAll(".loading h1 span");
+                
+                let timer = 100;
+                introText_tit.forEach((item) => {
+                    item.style.animation = `fade 500ms ${(timer += 70)}ms forwards`;
+                });
+            }, 200);
+            
+            setTimeout(() => {
+                const introText_sub = document.querySelectorAll(".loading h3 span");
+                
+                let timer = 100;
+                introText_sub.forEach((item) => {
+                    item.style.animation = `fade 500ms ${(timer += 70)}ms forwards`;
+                });
+            }, 1000);
+            
+            // 3초 후 로딩 화면 숨김
+            setTimeout(function () {
+                document.querySelector("html").style.overflow = 'auto';
+                loadingElement.style.display = "none";
+            }, 3000);
+        }
+    } else {
+        // 스크롤 위치가 0이 아니면 로딩 화면 숨김
+        const loadingElement = document.querySelector(".loading");
+        if (loadingElement) {
+            loadingElement.style.display = "none";
+        }
+        document.querySelector("html").style.overflow = 'auto';
+    }
 });
 
 window.onload = function(){
     setTimeout(function () {
         $("html").css("overflow",'auto'); 
         $(".loading").fadeOut();
-    }, 4000);
+    }, 3000);
 };
 
 // 디데이 타이머

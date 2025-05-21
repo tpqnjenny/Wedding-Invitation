@@ -64,47 +64,13 @@
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Birthstone&display=swap" rel="stylesheet">
-    <link href="https://fonts.googleapis.com/css2?family=Birthstone&family=Rochester&display=swap" rel="stylesheet">
+    <!-- <link href="https://fonts.googleapis.com/css2?family=Birthstone&family=Rochester&display=swap" rel="stylesheet"> -->
+    <link href="https://fonts.googleapis.com/css2?family=Birthstone&family=Gowun+Dodum&family=Rochester&display=swap" rel="stylesheet">
 </head>
 <body>
-    <!--콘솔창 차단 스크립트-->
-    <!-- <script>
-        !function() {
-        function detectDevTool(allow) {
-            if(isNaN(+allow)) allow = 100;
-            var start = +new Date(); 
-            debugger;
-            var end = +new Date(); 
-            if(isNaN(start) || isNaN(end) || end - start > allow) {
-            // 개발자 도구가 open 된것을 감지했을때 실행할 코드 삽입
-            alert('개발자 도구가 감지되었습니다!');
-            }
-        }
-        if(window.attachEvent) {
-            if (document.readyState === "complete" || document.readyState === "interactive") {
-                detectDevTool();
-            window.attachEvent('onresize', detectDevTool);
-            window.attachEvent('onmousemove', detectDevTool);
-            window.attachEvent('onfocus', detectDevTool);
-            window.attachEvent('onblur', detectDevTool);
-            } else {
-                setTimeout(argument.callee, 0);
-            }
-        } else {
-            window.addEventListener('load', detectDevTool);
-            window.addEventListener('resize', detectDevTool);
-            window.addEventListener('mousemove', detectDevTool);
-            window.addEventListener('focus', detectDevTool);
-            window.addEventListener('blur', detectDevTool);
-        }
-        }();
-    </script> -->
-    <!--콘솔창 차단 스크립트 끝-->
-
-
     <div class="mobile">
         <!-- 로딩화면 -->
-        <div class="loading">
+        <!-- <div class="loading">
             <div class="loading_con">
                 <h1>
                     <span>S</span>
@@ -145,16 +111,23 @@
                     <span>&nbsp;</span>
                     <span class="fc_red">♥</span></h3>
             </div>
-        </div>
+        </div> -->
 
         <!-- 본문 -->
         <div class="contents">
             <section class="main">
                 <div class="pos_r">
-                    <img src="img/img2.jpg" alt="">
+                    <div class="img_wrap">
+                        <img src="img/main.jpg" alt="">
+                    </div>
                     <div class="bg"></div>
-                    <p class="main_tit">We're<br>getting<br>married !</p>
+                    <!-- <p class="main_tit">We're<br>getting<br>married !</p> -->
+                    <!-- <p class="main_tit">SungLim<br>&<br>YeYoung</p> -->
+                    <div class="ani_wrap">
+                        
+                    </div>
                 </div>
+                <p class="main_tit2">성림 <span>and</span> 이영</p>
     
                 <div class="main_info">
                     <p>2025년 10월 19일 일요일<br>오후 2시 30분</p>
@@ -566,7 +539,7 @@
             </section>
     
             <section class="closing">
-                <img src="./img/img.jpg" alt="">
+                <img src="./img/ending.jpg" alt="">
             </section>
             
             <section class="share">
