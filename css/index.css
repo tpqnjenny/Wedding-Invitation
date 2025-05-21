@@ -11,6 +11,7 @@ html{overflow : 'hidden';}
 .mobile{width: 100%; max-width: 500px; margin: 0 auto; padding-bottom: 15%; border-left: 1px solid #ccc; border-right: 1px solid #ccc; box-shadow: 0px 0px 20px 0px #e0e0e0; position: relative; overflow-x: hidden;}
 section{width: 100%; margin-bottom: 20%; text-align: center;}
 section:not(:first-child){opacity: 0;}
+.contents{background: #fdfdfd;}
 .copyright{text-align: center; font-size: 12px; color: #505050;}
 
 @font-face {
@@ -29,12 +30,11 @@ section:not(:first-child){opacity: 0;}
 }
 
 .rochester-regular {
+    /* 영문 폰트 (로딩화면) */
     font-family: "Rochester", cursive;
     font-weight: 400;
     font-style: normal;
 }
-
-.contents{background: #fbfffa;}
 
 /* 로딩화면 */
 .loading{position: fixed; top: 0; left: 0; width: 100vw; height: 100vh; background-color: rgb(255 255 255 / 90%); z-index: 3;}
@@ -54,7 +54,7 @@ section:not(:first-child){opacity: 0;}
 .main .img_wrap{width: 92%; margin: 0 auto; border-radius: 45% 45% 0 0; overflow: hidden;}
 .main .bg{width: 100%; height: 100%; position: absolute; top: 0; left: 0; background: linear-gradient(180deg, transparent 80%, #fff 100%);}
 .main .main_tit{width: 70%; position: absolute; top: 4%; left: 50%; transform: translateX(-50%); line-height: 1; text-align: center; font-size: 66px; font-weight: bold; font-family: "Birthstone", sans-serif; color: #27770f; text-shadow: 1px 3px 2px rgb(255 255 255);}
-.main .main_tit2{width: 70%; position: absolute; top: 20px; left: 50%; transform: translateX(-50%); text-align: center; font-size: 28px; font-weight: bold; font-family: "Gowun Dodum", "Birthstone", sans-serif; color: #27770f; text-shadow: 1px 3px 2px rgb(255 255 255);}
+.main .main_tit2{width: 70%; position: absolute; top: 20px; left: 50%; transform: translateX(-50%); text-align: center; font-size: 28px; font-weight: bold; font-family: "GowunDodum-Regular", "Birthstone", sans-serif; color: #27770f; text-shadow: 1px 3px 2px rgb(255 255 255);}
 .main .main_tit2 span{margin-right: 5px; font-family: "Birthstone", sans-serif;}
 
 .main .main_info{width: 90%; margin: 0 auto; padding: 20px 0; text-align: center; border-top: 1px solid #999; border-bottom: 1px solid #999;}
