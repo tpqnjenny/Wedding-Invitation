@@ -3,6 +3,7 @@
 *,
 *::after,
 *::before {box-sizing: border-box;}
+html{touch-action: pan-y; /* 아이폰 확대 금지 css */}
 html,
 body {width: 100vw; max-width: 500px; margin: 0 auto; padding: 0; cursor: default; overflow-x: hidden;}
 
@@ -55,6 +56,7 @@ section:not(:first-child){opacity: 0;}
     }
 }
 
+/* 최상단 메인 */
 .main{position: relative; padding-top: 80px;}
 .main .img_wrap{width: 92%; margin: 0 auto; border-radius: 45% 45% 0 0; overflow: hidden;}
 .main .bg{width: 100%; height: 100%; position: absolute; top: 0; left: 0; background: linear-gradient(180deg, transparent 80%, #fff 100%);}
@@ -64,10 +66,12 @@ section:not(:first-child){opacity: 0;}
 .main .main_info{width: 90%; margin: 0 auto; padding: 15px 0; text-align: center; border-top: 1px solid #999; border-bottom: 1px solid #999;}
 .main .main_info h3{margin-top: 10px;}
 
+/* 초대 문구 */
 .invi_text{text-align: center;}
 .invi_text h3{margin-bottom: 30px; color: #73945f;}
 .invi_text p{line-height: 1.5}
 
+/* 연락처 */
 .tel ul{width: 75%; margin: 0 auto;}
 .tel > ul li{margin-bottom: 15px; display: flex; justify-content: space-between; align-items: center; letter-spacing: 0.5px;}
 .tel > ul li span:nth-child(2){width: 15%;}
@@ -86,6 +90,7 @@ section:not(:first-child){opacity: 0;}
 .tel .slide_tel .parents_tel{flex: 2 0 0;}
 .tel .slide_tel .parents_tel li{margin: 8px 0;}
 
+/* 달력 */
 .calendar{padding: 5% 0; background: #f3faf0;}
 .calendar .table_box{width: 90%; margin: 5% auto;}
 .calendar .table_box h1{font-size: 30px; color: #73945f;}
@@ -102,10 +107,12 @@ section:not(:first-child){opacity: 0;}
 .calendar .timer .time{margin-bottom: 5%; font-size: 24px;}
 .calendar .timer .time .col{margin-left: -1%; margin-right: 2%; letter-spacing: -1px;}
 
+/* 갤러리 */
 .gallery h3{margin-bottom: 10%; font-size: 22px; color: #73945f; letter-spacing: 1px;}
-.gallery .zoom_gallery{width: 95%; margin: 0 auto; display: grid; grid-template-columns: repeat(3, 1fr); grid-template-rows: 130px 130px 130px; grid-gap: 10px;}
+.gallery .zoom_gallery{width: 95%; margin: 0 auto; display: grid; grid-template-columns: repeat(3, 1fr); grid-template-rows: 130px 130px 130px 130px; grid-gap: 10px;}
 .gallery .zoom_gallery a{position: relative; overflow: hidden;}
 .gallery .zoom_gallery a img{width: 100%; position: absolute; top: 50%; left: 50%; transform: translate(-50%, -50%);}
+.gallery .zoom_gallery a img.t30{top: 30%;}
 
 .mfp-container{position: fixed; padding: 0;}
 .mfp-content{width: 85%; max-width: 600px !important; position: absolute; top: 50%; left: 50%; transform: translate(-50%, -50%);}
@@ -114,6 +121,7 @@ section:not(:first-child){opacity: 0;}
 .mfp-container .mfp-arrow-right{right: -7.5%; transform: scale(1); background: url(../img/next_btn.png) no-repeat center center / contain;}
 .mfp-container .mfp-arrow:before, .mfp-arrow:after{content: none;}
 
+/* 장소 - 오시는길 */
 .location{padding-top: 10%; background: #f3faf0;}
 .location h3{margin-bottom: 7%; color: #73945f; letter-spacing: 1px;}
 .location h4{font-size: 16px; font-weight: normal; line-height: 1.5; display: flex; justify-content: center; align-items: center; flex-wrap: wrap; letter-spacing: 0.5px;}
@@ -148,6 +156,7 @@ section:not(:first-child){opacity: 0;}
 .location .transfer_info ul li .line3{background: #fb5852;}
 .location .transfer_info ul li .line4{background: #8841d2;}
 
+/* 계좌번호 */
 .account{padding: 10% 0 5%; background: #f3faf0;}
 .account h3{margin-bottom: 7%; color: #73945f; letter-spacing: 1px;}
 .account > p{margin-bottom: 5%; line-height: 1.7; font-size: 14px; color: #505050}
@@ -167,12 +176,11 @@ section:not(:first-child){opacity: 0;}
 .account .account_info ul .slide_account li span{display: block; margin-bottom: 2%; font-size: 14px;}
 .account .account_info ul .slide_account li .copy_btn{position: absolute; top: 50%; right: 5%; transform: translateY(-50%); padding: 1.5% 5%; font-size: 13px; color: #353535; border: 1px solid #ddd; border-radius: 3px; box-shadow: 2px 2px 2px 1px #f1f1f1;}
 
-.video h3{margin-bottom: 10%; color: #73945f; letter-spacing: 1px;}
-.video iframe{width: 93%; height: 52vw; max-height: 260px;}
-
+/* 공유하기 */
 .share a{display: flex; justify-content: center; align-items: center; width: 70%; margin: 0 auto 3%; padding: 2% 0; font-size: 13px; border: 1px solid #969696; border-radius: 5px;}
 .share a img{width: 20px; height: 20px; margin-right: 3px;}
 
+/* 복사 메세지 */
 .copied_msg{width: 70%; max-width: 350px; padding: 15px 0; position: fixed; bottom: -30%; left: 50%; transform: translateX(-50%); text-align: center; font-size: 16px; color: #fff; background: #4c4c4c; border-radius: 5px; box-shadow: 3px 3px 7px 1px #2e2e2e; opacity: 0; transition: all 0.5s ease-in-out;}
 
 /* waypoint */
