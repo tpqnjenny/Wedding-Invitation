@@ -3,9 +3,8 @@
 *,
 *::after,
 *::before {box-sizing: border-box;}
-html{touch-action: pan-y; /* 아이폰 확대 금지 css */}
 html,
-body {width: 100vw; max-width: 500px; margin: 0 auto; padding: 0; cursor: default; overflow-x: hidden;}
+body {width: 100vw; max-width: 500px; margin: 0 auto; padding: 0; cursor: default; overflow-x: hidden; touch-action: pan-x pan-y; /* 아이폰 확대 금지 css */}
 
 *{font-family: 'GowunDodum-Regular', sans-serif;}
 html{overflow : 'hidden';}
