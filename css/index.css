@@ -130,7 +130,7 @@ section:not(:first-child){opacity: 0;}
 .location .icon_tel img{width: 18px; height: 18px; margin-left: 2%;}
 
 .location .map{width: 95%; height: 300px; margin: 5% auto;}
-.location .map_list{width: 95%; margin: 0 auto; padding-bottom: 5%; display: flex; justify-content: space-between; align-items: center;}
+.location .map_list{width: 95%; margin: 4vw auto 0; padding-bottom: 5%; display: flex; justify-content: space-between; align-items: center;}
 .location .map_list li{width: calc(100% / 3 - 6px);}
 .location .map_list li a{display: flex; justify-content: center; align-items: center; padding: 10% 0; border-radius: 5px; background: #fff; box-shadow: 3px 3px 3px 2px #f1f1f1;}
 .location .map_list li a img{width: 5vw; max-width: 20px; height: 5vw; max-height: 20px; margin-right: 3%;}
